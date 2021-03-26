@@ -1,0 +1,2 @@
+E:\ASP.NET MVC\HelloWorld.Tests\obj\Debug\HelloWorld.Tests.csprojAssemblyReference.cache
+E:\ASP.NET MVC\HelloWorld.Tests\obj\Debug\HelloWorld.Tests.csproj.CoreCompileInputs.cache
