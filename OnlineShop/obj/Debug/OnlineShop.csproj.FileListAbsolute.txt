@@ -77,3 +77,10 @@ E:\ASP.NET MVC\OnlineShop\obj\Debug\OnlineShop.csproj.CoreCompileInputs.cache
 E:\ASP.NET MVC\OnlineShop\obj\Debug\OnlineShop.csproj.CopyComplete
 E:\ASP.NET MVC\OnlineShop\obj\Debug\OnlineShop.dll
 E:\ASP.NET MVC\OnlineShop\obj\Debug\OnlineShop.pdb
+E:\ASP.NET MVC\OnlineShop\bin\Models.dll
+E:\ASP.NET MVC\OnlineShop\bin\EntityFramework.dll
+E:\ASP.NET MVC\OnlineShop\bin\Models.pdb
+E:\ASP.NET MVC\OnlineShop\bin\Models.dll.config
+E:\ASP.NET MVC\OnlineShop\bin\EntityFramework.xml
+E:\ASP.NET MVC\OnlineShop\bin\EntityFramework.SqlServer.dll
+E:\ASP.NET MVC\OnlineShop\bin\EntityFramework.SqlServer.xml
