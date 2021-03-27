@@ -6,6 +6,8 @@ using System.Web.Mvc;
 using Models.Framework;
 using OnlineShop.Areas.Admin.Models;
 using OnlineShop.Areas.Admin.Code;
+using System.Web.Security;
+
 namespace OnlineShop.Areas.Admin.Controllers
 {
     public class LoginController : Controller
@@ -24,7 +26,7 @@ namespace OnlineShop.Areas.Admin.Controllers
         //Để chống cái việc request liên tục
         public ActionResult Index(Account account)
         {
-            var res= db.Accounts.Where(x=>x.UserName==account.UserName && x.PassWord==account.PassWord).Count();
+            //var res= db.Accounts.Where(x=>x.UserName==account.UserName && x.PassWord==account.PassWord).Count();
             //var result = new AccountModel().Login(model.UserName, model.Password);
             //if (result != null && ModelState.IsValid)
             //{
@@ -39,15 +41,16 @@ namespace OnlineShop.Areas.Admin.Controllers
             //{
                 //try
                 //{
-                    if (res > 0)
-                    {
-                        return RedirectToAction("Index", "Home");
-                    }
-                    else
-                    {
-                        ModelState.AddModelError("", "Tên đăng nhập hoặc mật khẩu không đúng");
-                        return View();
-                    }
+                //    if (res > 0)
+                //    {
+                //SessionHelper.SetSession(new UserSession() { UserName =account.UserName});
+                //return RedirectToAction("Index", "Home");
+                //    }
+                //    else
+                //    {
+                //        ModelState.AddModelError("", "Tên đăng nhập hoặc mật khẩu không đúng");
+                //        return View();
+                //    }
                 //}
                 //catch (Exception ex)
                 //{
@@ -57,9 +60,24 @@ namespace OnlineShop.Areas.Admin.Controllers
                 
             //}
             //return View(account);
-           
-            
-          
+           if(Membership.ValidateUser(account.UserName, account.PassWord) && ModelState.IsValid)
+            {
+                FormsAuthentication.SetAuthCookie(account.UserName, account.RememberMe);
+                return RedirectToAction("Index", "Home");
+            }
+            else
+            {
+                ModelState.AddModelError("", "Tên đăng nhập hoặc mật khẩu không đúng");
+                return View();
+            }
+
         }
+
+        public ActionResult Logout()
+        {
+            FormsAuthentication.SignOut();//hủy tất cả nhưng cookie
+            return RedirectToAction("Index", "Login");
+        }
+       
     }
 }

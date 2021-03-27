@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace OnlineShop.Areas.Admin.Controllers
 {
+    [Authorize]//tự động check login
     public class HomeController : Controller
     {
         // GET: Admin/Home

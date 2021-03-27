@@ -33,3 +33,11 @@ E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\obj\Debug\OnlineShop.Tests.csproj.Cor
 E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\obj\Debug\OnlineShop.Tests.csproj.CopyComplete
 E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\obj\Debug\OnlineShop.Tests.dll
 E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\obj\Debug\OnlineShop.Tests.pdb
+E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\bin\Debug\Models.dll
+E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\bin\Debug\EntityFramework.dll
+E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\bin\Debug\WebGrease.dll
+E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\bin\Debug\Antlr3.Runtime.dll
+E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\bin\Debug\Models.pdb
+E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\bin\Debug\Models.dll.config
+E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\bin\Debug\EntityFramework.xml
+E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\bin\Debug\Antlr3.Runtime.pdb

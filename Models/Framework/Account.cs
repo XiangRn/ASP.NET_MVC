@@ -18,5 +18,7 @@ namespace Models.Framework
         [Required]
         [StringLength(50)]
         public string PassWord { get; set; }
+
+        public bool RememberMe { get; set; }
     }
 }
