@@ -1,3 +1,5 @@
+E:\ASP.NET MVC\OnlineShop\obj\Debug\OnlineShop.csprojAssemblyReference.cache
+E:\ASP.NET MVC\OnlineShop\obj\Debug\OnlineShop.csproj.CoreCompileInputs.cache
 E:\ASP.NET MVC\OnlineShop\bin\OnlineShop.dll.config
 E:\ASP.NET MVC\OnlineShop\bin\OnlineShop.dll
 E:\ASP.NET MVC\OnlineShop\bin\OnlineShop.pdb
@@ -51,8 +53,11 @@ E:\ASP.NET MVC\OnlineShop\bin\roslyn\vbc.rsp
 E:\ASP.NET MVC\OnlineShop\bin\roslyn\VBCSCompiler.exe
 E:\ASP.NET MVC\OnlineShop\bin\roslyn\VBCSCompiler.exe.config
 E:\ASP.NET MVC\OnlineShop\bin\Antlr3.Runtime.dll
+E:\ASP.NET MVC\OnlineShop\bin\EntityFramework.dll
+E:\ASP.NET MVC\OnlineShop\bin\EntityFramework.SqlServer.dll
 E:\ASP.NET MVC\OnlineShop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 E:\ASP.NET MVC\OnlineShop\bin\Microsoft.Web.Infrastructure.dll
+E:\ASP.NET MVC\OnlineShop\bin\Models.dll
 E:\ASP.NET MVC\OnlineShop\bin\Newtonsoft.Json.dll
 E:\ASP.NET MVC\OnlineShop\bin\System.Web.Helpers.dll
 E:\ASP.NET MVC\OnlineShop\bin\System.Web.Mvc.dll
@@ -62,6 +67,10 @@ E:\ASP.NET MVC\OnlineShop\bin\System.Web.WebPages.Deployment.dll
 E:\ASP.NET MVC\OnlineShop\bin\System.Web.WebPages.dll
 E:\ASP.NET MVC\OnlineShop\bin\System.Web.WebPages.Razor.dll
 E:\ASP.NET MVC\OnlineShop\bin\WebGrease.dll
+E:\ASP.NET MVC\OnlineShop\bin\Models.pdb
+E:\ASP.NET MVC\OnlineShop\bin\Models.dll.config
+E:\ASP.NET MVC\OnlineShop\bin\EntityFramework.xml
+E:\ASP.NET MVC\OnlineShop\bin\EntityFramework.SqlServer.xml
 E:\ASP.NET MVC\OnlineShop\bin\System.Web.Helpers.xml
 E:\ASP.NET MVC\OnlineShop\bin\System.Web.Mvc.xml
 E:\ASP.NET MVC\OnlineShop\bin\System.Web.Optimization.xml
@@ -72,15 +81,6 @@ E:\ASP.NET MVC\OnlineShop\bin\System.Web.WebPages.Razor.xml
 E:\ASP.NET MVC\OnlineShop\bin\Newtonsoft.Json.xml
 E:\ASP.NET MVC\OnlineShop\bin\Antlr3.Runtime.pdb
 E:\ASP.NET MVC\OnlineShop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-E:\ASP.NET MVC\OnlineShop\obj\Debug\OnlineShop.csprojAssemblyReference.cache
-E:\ASP.NET MVC\OnlineShop\obj\Debug\OnlineShop.csproj.CoreCompileInputs.cache
 E:\ASP.NET MVC\OnlineShop\obj\Debug\OnlineShop.csproj.CopyComplete
 E:\ASP.NET MVC\OnlineShop\obj\Debug\OnlineShop.dll
 E:\ASP.NET MVC\OnlineShop\obj\Debug\OnlineShop.pdb
-E:\ASP.NET MVC\OnlineShop\bin\Models.dll
-E:\ASP.NET MVC\OnlineShop\bin\EntityFramework.dll
-E:\ASP.NET MVC\OnlineShop\bin\Models.pdb
-E:\ASP.NET MVC\OnlineShop\bin\Models.dll.config
-E:\ASP.NET MVC\OnlineShop\bin\EntityFramework.xml
-E:\ASP.NET MVC\OnlineShop\bin\EntityFramework.SqlServer.dll
-E:\ASP.NET MVC\OnlineShop\bin\EntityFramework.SqlServer.xml

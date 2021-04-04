@@ -1,3 +1,4 @@
+E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\obj\Debug\OnlineShop.Tests.csproj.CoreCompileInputs.cache
 E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
 E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
@@ -16,6 +17,10 @@ E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\bin\Debug\System.Web.WebPages.Deploym
 E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\bin\Debug\System.Web.WebPages.dll
 E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\bin\Debug\System.Web.WebPages.Razor.dll
 E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\bin\Debug\System.Web.Optimization.dll
+E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\bin\Debug\Models.dll
+E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\bin\Debug\EntityFramework.dll
+E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\bin\Debug\WebGrease.dll
+E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\bin\Debug\Antlr3.Runtime.dll
 E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\bin\Debug\OnlineShop.pdb
 E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\bin\Debug\OnlineShop.dll.config
 E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
@@ -28,16 +33,11 @@ E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\bin\Debug\System.Web.WebPages.xml
 E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
 E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\bin\Debug\System.Web.WebPages.Razor.xml
 E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\bin\Debug\System.Web.Optimization.xml
-E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\obj\Debug\OnlineShop.Tests.csprojAssemblyReference.cache
-E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\obj\Debug\OnlineShop.Tests.csproj.CoreCompileInputs.cache
-E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\obj\Debug\OnlineShop.Tests.csproj.CopyComplete
-E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\obj\Debug\OnlineShop.Tests.dll
-E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\obj\Debug\OnlineShop.Tests.pdb
-E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\bin\Debug\Models.dll
-E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\bin\Debug\EntityFramework.dll
-E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\bin\Debug\WebGrease.dll
-E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\bin\Debug\Antlr3.Runtime.dll
 E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\bin\Debug\Models.pdb
 E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\bin\Debug\Models.dll.config
 E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\bin\Debug\EntityFramework.xml
 E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\bin\Debug\Antlr3.Runtime.pdb
+E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\obj\Debug\OnlineShop.Tests.csprojAssemblyReference.cache
+E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\obj\Debug\OnlineShop.Tests.csproj.CopyComplete
+E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\obj\Debug\OnlineShop.Tests.dll
+E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\obj\Debug\OnlineShop.Tests.pdb

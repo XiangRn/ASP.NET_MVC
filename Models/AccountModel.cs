@@ -9,10 +9,10 @@ namespace Models
 {
     public class AccountModel
     {
-        public OnlineShopDBContent context = null;
+        public OnlineShopDBContext context = null;
         public AccountModel()
         {
-            context = new OnlineShopDBContent();
+            context = new OnlineShopDBContext();
         }
         public string Login(string username, string password)
         {

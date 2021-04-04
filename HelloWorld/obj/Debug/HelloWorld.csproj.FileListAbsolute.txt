@@ -51,6 +51,8 @@ E:\ASP.NET MVC\HelloWorld\bin\roslyn\vbc.rsp
 E:\ASP.NET MVC\HelloWorld\bin\roslyn\VBCSCompiler.exe
 E:\ASP.NET MVC\HelloWorld\bin\roslyn\VBCSCompiler.exe.config
 E:\ASP.NET MVC\HelloWorld\bin\Antlr3.Runtime.dll
+E:\ASP.NET MVC\HelloWorld\bin\EntityFramework.dll
+E:\ASP.NET MVC\HelloWorld\bin\EntityFramework.SqlServer.dll
 E:\ASP.NET MVC\HelloWorld\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 E:\ASP.NET MVC\HelloWorld\bin\Microsoft.Web.Infrastructure.dll
 E:\ASP.NET MVC\HelloWorld\bin\Newtonsoft.Json.dll
@@ -62,6 +64,8 @@ E:\ASP.NET MVC\HelloWorld\bin\System.Web.WebPages.Deployment.dll
 E:\ASP.NET MVC\HelloWorld\bin\System.Web.WebPages.dll
 E:\ASP.NET MVC\HelloWorld\bin\System.Web.WebPages.Razor.dll
 E:\ASP.NET MVC\HelloWorld\bin\WebGrease.dll
+E:\ASP.NET MVC\HelloWorld\bin\EntityFramework.xml
+E:\ASP.NET MVC\HelloWorld\bin\EntityFramework.SqlServer.xml
 E:\ASP.NET MVC\HelloWorld\bin\System.Web.Helpers.xml
 E:\ASP.NET MVC\HelloWorld\bin\System.Web.Mvc.xml
 E:\ASP.NET MVC\HelloWorld\bin\System.Web.Optimization.xml
@@ -76,8 +80,4 @@ E:\ASP.NET MVC\HelloWorld\obj\Debug\HelloWorld.csproj.CoreCompileInputs.cache
 E:\ASP.NET MVC\HelloWorld\obj\Debug\HelloWorld.csproj.CopyComplete
 E:\ASP.NET MVC\HelloWorld\obj\Debug\HelloWorld.dll
 E:\ASP.NET MVC\HelloWorld\obj\Debug\HelloWorld.pdb
-E:\ASP.NET MVC\HelloWorld\bin\EntityFramework.dll
-E:\ASP.NET MVC\HelloWorld\bin\EntityFramework.SqlServer.dll
-E:\ASP.NET MVC\HelloWorld\bin\EntityFramework.xml
-E:\ASP.NET MVC\HelloWorld\bin\EntityFramework.SqlServer.xml
 E:\ASP.NET MVC\HelloWorld\obj\Debug\HelloWorld.csprojAssemblyReference.cache

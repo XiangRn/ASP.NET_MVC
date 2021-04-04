@@ -1,18 +1,14 @@
 ﻿
 @{
-    ViewBag.Title = "Index";
-    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    Layout = null;
 }
-@model Models.Framework.Account
+@model Models.Framework.User
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Page Title - SB Admin</title>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
     <link href="~/Assets/admin/css/styles.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
 </head>
@@ -28,32 +24,33 @@
                                 <div class="card-body">
                                     @using (Html.BeginForm())
                                     {
-                                      @Html.AntiForgeryToken()
-                                        @Html.ValidationSummary(true,null,new { @class="alert alert-danger"})
+                                        @Html.AntiForgeryToken()
+                                        @Html.ValidationSummary(true, null, new { @class = "alert alert-danger" })
                                     <div class="form-group">
 
                                         <label class="small mb-1" for="inputEmailAddress">Email</label>
-                                        @Html.TextBoxFor(model => model.UserName, new { @class = "form-control py-4", @id = "inputEmailAddress",  @placeholder = "Enter email address" })
+                                        @Html.TextBoxFor(model => model.UserName, new { @class = "form-control py-4", @id = "inputEmailAddress", @placeholder = "Enter email address" })
+                                        @Html.ValidationMessageFor(model=>model.UserName, "", new { @class = "text-danger" })
                                     </div>
                                     <div class="form-group">
                                         <label class="small mb-1" for="inputPassword">Password</label>
 
-                                        @Html.TextBoxFor(model => model.PassWord, new { @class = "form-control py-4", @id = "inputPassword", @type = "password", @placeholder = "Enter password" })
+                                        @Html.TextBoxFor(model => model.Password, new { @class = "form-control py-4", @id = "inputPassword", @type = "password", @placeholder = "Enter password" })
+                                        @Html.ValidationMessageFor(model=>model.Password, "", new { @class = "text-danger" })
                                     </div>
-                                            <div class="form-group">
-                                                <div class="custom-control custom-checkbox">
-                                                
-                                                    <input class="custom-control-input" id="rememberPasswordCheck" type="checkbox" />
-                                                    <label class="custom-control-label" for="rememberPasswordCheck">Remember password</label>
-                                                </div>
-                                            </div>
-                                            <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
-                                                <a class="small" href="password.html">Forgot Password?</a>
-                                                <button class="btn btn-primary" type="submit">Login</button>
-                                            </div>
-                                   
-                                    }
+                                        <div class="form-group">
+                                            <div class="custom-control custom-checkbox">
 
+                                                <input class="custom-control-input" id="rememberPasswordCheck" type="checkbox" />
+                                                <label class="custom-control-label" for="rememberPasswordCheck">Remember password</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
+                                            <a class="small" href="password.html">Forgot Password?</a>
+                                            <button class="btn btn-primary" type="submit">Login</button>
+                                        </div>
+
+                                    }
                                 </div>
                                 <div class="card-footer text-center">
                                     <div class="small"><a href="register.html">Need an account? Sign up!</a></div>
@@ -84,5 +81,3 @@
     <script src="~/Assets/admin/js/scripts.js"></script>
 </body>
 </html>
-
-

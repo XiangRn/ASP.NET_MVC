@@ -107,8 +107,8 @@ namespace OnlineShop.Areas.Admin.Code
 
         public override bool ValidateUser(string username, string password)
         {
-            OnlineShopDBContent db = new OnlineShopDBContent();
-            return db.Accounts.Where(x => x.UserName == username && x.PassWord == password).Count() > 0;
+            OnlineShopDBContext db = new OnlineShopDBContext();
+            return db.Users.SqlQuery("select * from [User] where UserName=@p0 and Password=@p1",username,password).Count()>0;
         }
     }
 }

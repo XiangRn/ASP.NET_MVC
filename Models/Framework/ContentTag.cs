@@ -6,19 +6,17 @@ namespace Models.Framework
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("Account")]
-    public partial class Account
+    [Table("ContentTag")]
+    public partial class ContentTag
     {
         [Key]
-        [Required]
-      
-        [StringLength(20)]
-        public string UserName { get; set; }
+        [Column(Order = 0)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public long ContentID { get; set; }
 
-        [Required]
+        [Key]
+        [Column(Order = 1)]
         [StringLength(50)]
-        public string PassWord { get; set; }
-
-        public bool RememberMe { get; set; }
+        public string TagID { get; set; }
     }
 }
