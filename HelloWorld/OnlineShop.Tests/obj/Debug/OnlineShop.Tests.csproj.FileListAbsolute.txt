@@ -41,3 +41,5 @@ E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\obj\Debug\OnlineShop.Tests.csprojAsse
 E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\obj\Debug\OnlineShop.Tests.csproj.CopyComplete
 E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\obj\Debug\OnlineShop.Tests.dll
 E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\obj\Debug\OnlineShop.Tests.pdb
+E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\bin\Debug\PagedList.dll
+E:\ASP.NET MVC\HelloWorld\OnlineShop.Tests\bin\Debug\PagedList.xml

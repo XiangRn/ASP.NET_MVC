@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Models.Framework;
+using PagedList;
 
 namespace Models.DAO
 {
@@ -13,6 +14,35 @@ namespace Models.DAO
         public UserDao()
         {
             db = new OnlineShopDBContext();
+        }
+        public User GetUserID(int id)
+        {
+            return db.Users.Find(id);
+        }
+
+        public bool Update(User user)
+        {
+            List<object> lst = new List<object>();
+            lst.Add(user.UserName);
+            lst.Add(user.Password);
+            lst.Add(user.Name);
+            lst.Add(user.Address);
+            lst.Add(user.Email);
+            lst.Add(user.Phone);
+            lst.Add(user.ModifiedBy);
+            lst.Add(user.ModifiedDate);
+            lst.Add(user.Status);
+            lst.Add(user.ID);
+            object[] ls = lst.ToArray();
+            var result = db.Database.ExecuteSqlCommand("declare @date datetime=getdate();update [User] set UserName=@p0,Password=@p1,Name=@p2,Address=@p3,Email=@p4,Phone=@p5, ModifiedBy=@p6,ModifiedDate=@date,Status=@p8 where ID=@p9 ", ls);
+            if (result > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
         public long Insert(User user)
         {
@@ -66,6 +96,18 @@ namespace Models.DAO
                 }
             }
           
+        }
+        public IEnumerable<User> ListAll(string searchString, int page, int pagesize)
+        {
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                return db.Users.SqlQuery("select * From [User] where UserName like '%" + searchString + "%' or Name like '%" + searchString + "%'").ToPagedList(page, pagesize);
+            }
+            return db.Users.SqlQuery("select * from [User]").ToPagedList(page,pagesize) ;
+        }
+        public bool Delete(int id)
+        {
+            return db.Database.ExecuteSqlCommand("delete from [User] where ID=@p0", id)!=null;
         }
     }
 }

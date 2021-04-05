@@ -6,14 +6,17 @@ using System.Web.Mvc;
 using Models.DAO;
 using Models.Framework;
 using OnlineShop.Common;
+using PagedList.Mvc;
 namespace OnlineShop.Areas.Admin.Controllers
 {
     public class UserController : Controller
     {
-        OnlineShopDBContext db = new OnlineShopDBContext();
-        public ActionResult Index()
+        UserDao dao = new UserDao();
+      OnlineShopDBContext db = new OnlineShopDBContext();
+        public ActionResult Index(string searchString, int page=1, int pagesize=2)
         {
-            var result = db.Users.SqlQuery("select * from [User]").ToList();
+            var result = dao.ListAll(searchString, page,pagesize);
+            ViewBag.searchString = searchString;
             return View(result);
         }
         // GET: Admin/User
@@ -25,7 +28,7 @@ namespace OnlineShop.Areas.Admin.Controllers
         [HttpPost]//Post là post lên
         public ActionResult Create(User user)
         {
-            var dao = new UserDao();
+            dao = new UserDao();
            user.Password= Encryptor.EncMD5(user.Password);
             long id = dao.Insert(user);
             if (id > 0)
@@ -35,6 +38,53 @@ namespace OnlineShop.Areas.Admin.Controllers
             else
             {
                 ModelState.AddModelError("", "Tạo tài khoản không thành công");
+                return View();
+            }
+        }
+        [HttpGet]
+        public ActionResult Update(int id)
+        {           
+                return View(dao.GetUserID(id));       
+           
+        }
+        [HttpPost]
+        public ActionResult Update(User user)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    if (!string.IsNullOrEmpty(user.Password))
+                    {
+                        user.Password = Encryptor.EncMD5(user.Password);
+                    }
+                   
+                    if (dao.Update(user))
+                    {
+                        return RedirectToAction("Index");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    ModelState.AddModelError("", ex.Message);
+                    return View();
+                }         
+                           
+              
+            }
+            return View();
+           
+        }
+     
+        public ActionResult Delete(int id)
+        {
+           
+            if (dao.Delete(id))
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
                 return View();
             }
         }

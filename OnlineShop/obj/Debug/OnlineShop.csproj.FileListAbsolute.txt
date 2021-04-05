@@ -84,3 +84,7 @@ E:\ASP.NET MVC\OnlineShop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform
 E:\ASP.NET MVC\OnlineShop\obj\Debug\OnlineShop.csproj.CopyComplete
 E:\ASP.NET MVC\OnlineShop\obj\Debug\OnlineShop.dll
 E:\ASP.NET MVC\OnlineShop\obj\Debug\OnlineShop.pdb
+E:\ASP.NET MVC\OnlineShop\bin\PagedList.dll
+E:\ASP.NET MVC\OnlineShop\bin\PagedList.Mvc.dll
+E:\ASP.NET MVC\OnlineShop\bin\PagedList.xml
+E:\ASP.NET MVC\OnlineShop\bin\PagedList.Mvc.xml
