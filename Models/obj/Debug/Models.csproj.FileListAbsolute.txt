@@ -9,8 +9,15 @@ E:\ASP.NET MVC\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
 E:\ASP.NET MVC\Models\obj\Debug\Models.csproj.CopyComplete
 E:\ASP.NET MVC\Models\obj\Debug\Models.dll
 E:\ASP.NET MVC\Models\obj\Debug\Models.pdb
-E:\ASP.NET MVC\Models\obj\Debug\Models.csprojAssemblyReference.cache
 E:\ASP.NET MVC\Models\bin\Debug\PagedList.dll
 E:\ASP.NET MVC\Models\bin\Debug\PagedList.Mvc.dll
 E:\ASP.NET MVC\Models\bin\Debug\PagedList.xml
 E:\ASP.NET MVC\Models\bin\Debug\PagedList.Mvc.xml
+E:\ASP.NET MVC\Models\bin\Debug\CKFinder.dll
+E:\ASP.NET MVC\Models\bin\Debug\CKFinder_FileEditor.dll
+E:\ASP.NET MVC\Models\bin\Debug\CKFinder_ImageResize.dll
+E:\ASP.NET MVC\Models\bin\Debug\CKFinder_Watermark.dll
+E:\ASP.NET MVC\Models\bin\Debug\CKFinder_FileEditor.pdb
+E:\ASP.NET MVC\Models\bin\Debug\CKFinder_ImageResize.pdb
+E:\ASP.NET MVC\Models\bin\Debug\CKFinder_Watermark.pdb
+E:\ASP.NET MVC\Models\obj\Debug\Models.csprojAssemblyReference.cache

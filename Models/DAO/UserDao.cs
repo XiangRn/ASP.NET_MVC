@@ -101,13 +101,29 @@ namespace Models.DAO
         {
             if (!string.IsNullOrEmpty(searchString))
             {
-                return db.Users.SqlQuery("select * From [User] where UserName like '%" + searchString + "%' or Name like '%" + searchString + "%'").ToPagedList(page, pagesize);
+                return db.Users.SqlQuery("select * From [User] where UserName like '%" + searchString + "%'" +
+                    " or Name like '%" + searchString + "%'").ToPagedList(page, pagesize);
             }
             return db.Users.SqlQuery("select * from [User]").ToPagedList(page,pagesize) ;
         }
         public bool Delete(int id)
         {
             return db.Database.ExecuteSqlCommand("delete from [User] where ID=@p0", id)!=null;
+        }
+      
+        public bool ChangeStatus(long id)
+        {
+            var user = db.Users.Find(id);
+            if (user.Status == true)
+            {
+                user.Status = false;
+            }
+            else
+            {
+                user.Status = true;
+            }          
+            db.SaveChanges();
+            return user.Status;
         }
     }
 }
