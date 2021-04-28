@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Models.DAO;
 using Models.Framework;
-namespace MyProject.Areas.Admin.Controllers
+namespace OnlineShop.Areas.Admin.Controllers
 {
     public class CategoryyController : BaseController
     {

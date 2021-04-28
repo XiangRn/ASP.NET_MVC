@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.Mvc;
 using Models.DAO;
 using Models.Framework;
-using MyProject.Common;
+using OnlineShop.Common;
 using PagedList.Mvc;
-namespace MyProject.Areas.Admin.Controllers
+namespace OnlineShop.Areas.Admin.Controllers
 {
     public class UserController : BaseController
     {

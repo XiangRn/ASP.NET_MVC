@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using MyProject.Common;
+using OnlineShop.Common;
 using System.Web.Routing;
 using Models.Framework;
-namespace MyProject.Areas.Admin.Controllers
+namespace OnlineShop.Areas.Admin.Controllers
 {
     //[Authorize]//tự động check login
  

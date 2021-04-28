@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Models.Framework;
-namespace MyProject.Areas.Admin.Controllers
+namespace OnlineShop.Areas.Admin.Controllers
 {
     public class CategoryController : Controller
     {

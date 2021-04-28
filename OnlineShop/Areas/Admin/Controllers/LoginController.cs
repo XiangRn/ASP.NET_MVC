@@ -4,12 +4,12 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Models.Framework;
-using MyProject.Areas.Admin.Models;
-using MyProject.Areas.Admin.Code;
+using OnlineShop.Areas.Admin.Models;
+using OnlineShop.Areas.Admin.Code;
 using System.Web.Security;
 using Models.DAO;
-using MyProject.Common;
-namespace MyProject.Areas.Admin.Controllers
+using OnlineShop.Common;
+namespace OnlineShop.Areas.Admin.Controllers
 {
     public class LoginController : Controller
     {

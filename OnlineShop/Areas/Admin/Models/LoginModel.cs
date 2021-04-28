@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace MyProject.Areas.Admin.Models
+namespace OnlineShop.Areas.Admin.Models
 {
     public class LoginModel
     {

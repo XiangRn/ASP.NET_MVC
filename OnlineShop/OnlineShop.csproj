@@ -52,6 +52,22 @@
     <Reference Include="BotDetect.Web.Mvc, Version=4.4.2.0, Culture=neutral, PublicKeyToken=74616036388b765f, processorArchitecture=MSIL">
       <HintPath>..\HelloWorld\packages\Captcha.4.4.2\lib\net35\BotDetect.Web.Mvc.dll</HintPath>
     </Reference>
+    <Reference Include="CKFinder, Version=2.6.0.2792, Culture=neutral, PublicKeyToken=579e7adc719a1423, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\CKFinder and CKEditor\ckfinder\bin\Release\CKFinder.dll</HintPath>
+    </Reference>
+    <Reference Include="CKFinder_FileEditor, Version=2.1.0.1132, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\CKFinder and CKEditor\ckfinder\bin\Release\CKFinder_FileEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="CKFinder_ImageResize, Version=2.1.0.1132, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\CKFinder and CKEditor\ckfinder\bin\Release\CKFinder_ImageResize.dll</HintPath>
+    </Reference>
+    <Reference Include="CKFinder_Watermark, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\CKFinder and CKEditor\ckfinder\bin\Release\CKFinder_Watermark.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\HelloWorld\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -145,58 +161,18 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\AccessControlRules.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\AssemblyInfo.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\CKFinderEvent.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\CKFinderEventArgs.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\CKFinderPlugin.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\CommandHandlers\CommandHandlerBase.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\CommandHandlers\CopyFilesCommandHandler.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\CommandHandlers\CreateFolderCommandHandler.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\CommandHandlers\DeleteFilesCommandHandler.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\CommandHandlers\DeleteFolderCommandHandler.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\CommandHandlers\DownloadFileCommandHandler.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\CommandHandlers\ErrorCommandHandler.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\CommandHandlers\FileUploadCommandHandler.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\CommandHandlers\GetFilesCommandHandler.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\CommandHandlers\GetFoldersCommandHandler.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\CommandHandlers\InitCommandHandler.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\CommandHandlers\LoadCookiesCommandHandler.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\CommandHandlers\MoveFilesCommandHandler.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\CommandHandlers\QuickUploadCommandHandler.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\CommandHandlers\RenameFileCommandHandler.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\CommandHandlers\RenameFolderCommandHandler.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\CommandHandlers\ThumbnailCommandHandler.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\CommandHandlers\XmlCommandHandlerBase.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\Config.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\Connector.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\ConnectorException.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\Errors.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\FolderHandler.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\ImageTools.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\Lang.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\OctreeQuantizer.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\Quantizer.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\RegexLib.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\RestartModule.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\Util.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\XmlUtil.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\FileBrowser.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\FileBrowserDesigner.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\Resources\Plugins\FileEditor\Properties\AssemblyInfo.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\Resources\Plugins\FileEditor\SaveFile.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\Resources\Plugins\ImageResize\ImageResize.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\Resources\Plugins\ImageResize\Properties\AssemblyInfo.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\Resources\Plugins\Watermark\Properties\AssemblyInfo.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\Resources\Plugins\Watermark\Watermark.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\Settings\AccessControl.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\Settings\AccessControlManager.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\Settings\ConfigFile.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\Settings\Images.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\Settings\ResourceType.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\Settings\ResourceTypeManager.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\Settings\Thumbnails.cs" />
-    <Compile Include="Assets\admin\js\ckfinder\_source\TriStateBool.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Code\CustomMembershipProvider.cs" />
+    <Compile Include="Areas\Admin\Code\SessionHelper.cs" />
+    <Compile Include="Areas\Admin\Code\UserSession.cs" />
+    <Compile Include="Areas\Admin\Controllers\BaseController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CategoryController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CategoryyController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ContentController.cs" />
+    <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
+    <Compile Include="Areas\Admin\Controllers\UserController.cs" />
+    <Compile Include="Areas\Admin\Models\LoginModel.cs" />
     <Compile Include="Common\CommonConstants.cs" />
     <Compile Include="Common\Encryptor.cs" />
     <Compile Include="Controllers\AboutController.cs" />
@@ -1196,27 +1172,6 @@
     <Content Include="Assets\admin\js\ckfinder\skins\v1\skin.js" />
     <Content Include="Assets\admin\js\ckfinder\skins\v1\uipanel.css" />
     <Content Include="Assets\admin\js\ckfinder\translations.txt" />
-    <Content Include="Assets\admin\js\ckfinder\_samples\aspx\popup.aspx" />
-    <Content Include="Assets\admin\js\ckfinder\_samples\aspx\popups.aspx" />
-    <Content Include="Assets\admin\js\ckfinder\_samples\aspx\standalone.aspx" />
-    <Content Include="Assets\admin\js\ckfinder\_samples\ckeditor.html" />
-    <Content Include="Assets\admin\js\ckfinder\_samples\index.html" />
-    <Content Include="Assets\admin\js\ckfinder\_samples\popup.html" />
-    <Content Include="Assets\admin\js\ckfinder\_samples\popups.html" />
-    <Content Include="Assets\admin\js\ckfinder\_samples\public_api.html" />
-    <Content Include="Assets\admin\js\ckfinder\_samples\sample.css" />
-    <Content Include="Assets\admin\js\ckfinder\_samples\skin_bootstrap.html" />
-    <Content Include="Assets\admin\js\ckfinder\_samples\skin_v1.html" />
-    <Content Include="Assets\admin\js\ckfinder\_samples\standalone.html" />
-    <Content Include="Assets\admin\js\ckfinder\_samples\standalone_v1.html" />
-    <Content Include="Assets\admin\js\ckfinder\_source\CKFinder.ico" />
-    <Content Include="Assets\admin\js\ckfinder\_source\CKFinder.Net.sln" />
-    <Content Include="Assets\admin\js\ckfinder\_source\Resources\Plugins\FileEditor\CKFinder.ico" />
-    <Content Include="Assets\admin\js\ckfinder\_source\Resources\Plugins\FileEditor\FileEditor.sln" />
-    <Content Include="Assets\admin\js\ckfinder\_source\Resources\Plugins\ImageResize\CKFinder.ico" />
-    <Content Include="Assets\admin\js\ckfinder\_source\Resources\Plugins\ImageResize\ImageResize.sln" />
-    <Content Include="Assets\admin\js\ckfinder\_source\Resources\Plugins\Watermark\CKFinder.ico" />
-    <Content Include="Assets\admin\js\ckfinder\_source\Resources\Plugins\Watermark\Watermark.sln" />
     <Content Include="Assets\Client\css\bootstrap-social.css" />
     <Content Include="Assets\Client\css\jquery-ui.css" />
     <Content Include="Assets\Client\data\Provinces_Data.xml" />
@@ -1357,11 +1312,23 @@
     <Content Include="Assets\admin\js\ckfinder\skins\bootstrap\assets\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Assets\admin\js\ckfinder\skins\bootstrap\assets\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Assets\admin\js\ckfinder\userfiles\.htaccess" />
-    <Content Include="Assets\admin\js\ckfinder\_source\CKFinder.Net.csproj" />
-    <Content Include="Assets\admin\js\ckfinder\_source\CKFinderKey.snk" />
-    <Content Include="Assets\admin\js\ckfinder\_source\Resources\Plugins\FileEditor\FileEditor.csproj" />
-    <Content Include="Assets\admin\js\ckfinder\_source\Resources\Plugins\ImageResize\ImageResize.csproj" />
-    <Content Include="Assets\admin\js\ckfinder\_source\Resources\Plugins\Watermark\Watermark.csproj" />
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Categoryy\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Content\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Content\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Content\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Login\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_LeftMenu.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_TopMenu.cshtml" />
+    <Content Include="Areas\Admin\Views\User\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\User\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\User\LUser.cshtml" />
+    <Content Include="Areas\Admin\Views\User\Update.cshtml" />
+    <Content Include="Areas\Admin\Views\web.config" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -1405,6 +1372,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Views\Base\" />
     <Folder Include="Data\" />
   </ItemGroup>
   <ItemGroup>

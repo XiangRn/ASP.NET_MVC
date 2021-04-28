@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace MyProject.Areas.Admin.Code
+namespace OnlineShop.Areas.Admin.Code
 {
     public class SessionHelper
     {
