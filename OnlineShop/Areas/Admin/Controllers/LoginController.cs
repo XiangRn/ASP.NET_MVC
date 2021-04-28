@@ -73,7 +73,7 @@ namespace OnlineShop.Areas.Admin.Controllers
                     //sessionUser.UserName = user.UserName;
                     //sessionUser.Id = user.ID;
                     //Session.Add(CommonConstants.USER_SESSION, sessionUser);
-                  Session["UserID"] = user.ID;
+                  Session["UserID"] = user.Name;
                     return RedirectToAction("Index", "Home");
                 }
                 else if (result == 0)

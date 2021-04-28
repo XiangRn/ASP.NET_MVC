@@ -19,7 +19,7 @@ namespace Models.DAO
         {
             return db.Users.Find(id);
         }
-
+       
         public bool Update(User user)
         {
             List<object> lst = new List<object>();
@@ -106,9 +106,13 @@ namespace Models.DAO
             }
             return db.Users.SqlQuery("select * from [User]").ToPagedList(page,pagesize) ;
         }
+        public IEnumerable<User> ListEx(int page, int pagesize)
+        {
+            return db.Users.SqlQuery("select * from [User]").ToPagedList(page, pagesize);
+        }
         public bool Delete(int id)
         {
-            return db.Database.ExecuteSqlCommand("delete from [User] where ID=@p0", id)!=null;
+            return db.Database.ExecuteSqlCommand("delete from [User] where ID=@p0", id)>0;
         }
       
         public bool ChangeStatus(long id)
@@ -124,6 +128,26 @@ namespace Models.DAO
             }          
             db.SaveChanges();
             return user.Status;
+        }
+        public bool checkUserName(string username)
+        {
+            return db.Users.SingleOrDefault(x=>x.UserName==username)!=null;
+        }
+        public bool checkPhone(string phone)
+        {
+            return db.Users.SingleOrDefault(x => x.Phone == phone) != null;
+        }
+        public bool checkEmail(string email)
+        {
+            return db.Users.SingleOrDefault(x => x.Email == email) != null;
+        }
+        public bool checkAccount(string username,string password)
+        {
+            return db.Users.SingleOrDefault(x => x.UserName == username && x.Password==password) != null;
+        }
+        public bool checkAccountIsActive(string username)
+        {
+            return db.Users.SingleOrDefault(x => x.UserName == username).Status==false;
         }
     }
 }

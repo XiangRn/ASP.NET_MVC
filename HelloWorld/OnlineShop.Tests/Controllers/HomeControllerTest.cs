@@ -16,7 +16,7 @@ namespace OnlineShop.Tests.Controllers
         public void Index()
         {
             // Arrange
-            HomeClientController controller = new HomeClientController();
+            HomeController controller = new HomeController();
 
             // Act
             ViewResult result = controller.Index() as ViewResult;
@@ -29,7 +29,7 @@ namespace OnlineShop.Tests.Controllers
         public void About()
         {
             // Arrange
-            HomeClientController controller = new HomeClientController();
+            HomeController controller = new HomeController();
 
             // Act
             ViewResult result = controller.About() as ViewResult;
@@ -42,7 +42,7 @@ namespace OnlineShop.Tests.Controllers
         public void Contact()
         {
             // Arrange
-            HomeClientController controller = new HomeClientController();
+            HomeController controller = new HomeController();
 
             // Act
             ViewResult result = controller.Contact() as ViewResult;

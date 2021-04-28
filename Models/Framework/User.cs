@@ -13,12 +13,12 @@
         public long ID { get; set; }
 
         [StringLength(50)]
-        [Required(ErrorMessage ="Enter Your UserName")]
+        [Required(ErrorMessage = "Enter Your UserName")]
         [DisplayName("Tên Tài Khoản")]
         public string UserName { get; set; }
 
         [StringLength(32)]
-        [Required(ErrorMessage ="Enter Your PassWord")]
+        [Required(ErrorMessage = "Enter Your PassWord")]
         [DisplayName("Mật Khẩu")]
         public string Password { get; set; }
 
@@ -38,7 +38,12 @@
         [DisplayName("Số điện thoại")]
         public string Phone { get; set; }
 
-       
+        public int? ProvinceID { get; set; }
+
+        public int? DistrictID { get; set; }
+
+        public int? TownID { get; set; }
+
         public DateTime? CreatedDate { get; set; }
 
         [StringLength(50)]
@@ -51,5 +56,6 @@
 
         [DisplayName("Trạng Thái")]
         public bool Status { get; set; }
+        
     }
 }

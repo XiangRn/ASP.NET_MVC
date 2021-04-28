@@ -73,7 +73,10 @@
   <ItemGroup>
     <Compile Include="AccountModel.cs" />
     <Compile Include="DAO\CategoryyDao.cs" />
+    <Compile Include="DAO\ContactDAO.cs" />
     <Compile Include="DAO\ContentDAO.cs" />
+    <Compile Include="DAO\MenuDao.cs" />
+    <Compile Include="DAO\ProductDAO.cs" />
     <Compile Include="DAO\UserDao.cs" />
     <Compile Include="Framework\About.cs" />
     <Compile Include="Framework\Category.cs" />
@@ -86,9 +89,12 @@
     <Compile Include="Framework\Menu.cs" />
     <Compile Include="Framework\MenuType.cs" />
     <Compile Include="Framework\OnlineShopDBContext.cs" />
+    <Compile Include="Framework\Order.cs" />
+    <Compile Include="Framework\OrderDetail.cs" />
     <Compile Include="Framework\ProductCategory.cs" />
     <Compile Include="Framework\Productt.cs" />
     <Compile Include="Framework\Slide.cs" />
+    <Compile Include="Framework\sysdiagram.cs" />
     <Compile Include="Framework\SystemConfig.cs" />
     <Compile Include="Framework\Tag.cs" />
     <Compile Include="Framework\User.cs" />
@@ -100,6 +106,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\PagedList.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{a78139e8-ec6b-4cb5-94ec-e933f46ea482}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StaticResource\StaticResource.csproj">
+      <Project>{87536678-06a5-4d23-9f3b-f11116496563}</Project>
+      <Name>StaticResource</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

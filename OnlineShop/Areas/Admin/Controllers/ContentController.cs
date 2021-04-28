@@ -62,7 +62,7 @@ namespace OnlineShop.Areas.Admin.Controllers
                 {
                     if (dao.Edit(content))
                     {
-                        return RedirectToAction("Index");
+                        return RedirectToAction("Index","Content");
                     }
                     else
                     {
@@ -76,6 +76,24 @@ namespace OnlineShop.Areas.Admin.Controllers
                     return View();
                 }
             }
+            return View();
+        }
+        [HttpGet]
+        public ActionResult Insert()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult Insert(Content content)
+        {
+            if (ModelState.IsValid)
+            {
+                content.CreatedBy = Session["UserID"].ToString();
+                dao.Insert(content);
+                return RedirectToAction("Index");
+            }
+         
             return View();
         }
     }

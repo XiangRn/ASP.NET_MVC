@@ -9,7 +9,7 @@ namespace Models.Framework
     [Table("Feedback")]
     public partial class Feedback
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
 
         [StringLength(50)]
@@ -29,6 +29,6 @@ namespace Models.Framework
 
         public DateTime? CreatedDate { get; set; }
 
-        public bool? Status { get; set; }
+        public bool Status { get; set; }
     }
 }

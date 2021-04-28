@@ -43,7 +43,7 @@ namespace Models.Framework
         [StringLength(250)]
         public string MetaKeywords { get; set; }
 
-        public bool? Status { get; set; }
+        public bool Status { get; set; }
 
         public DateTime? TopHot { get; set; }
 
@@ -51,5 +51,7 @@ namespace Models.Framework
 
         [StringLength(500)]
         public string Tags { get; set; }
+
+        public string Language { get; set; }
     }
 }

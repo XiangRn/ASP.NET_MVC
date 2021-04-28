@@ -80,4 +80,3 @@ E:\ASP.NET MVC\HelloWorld\obj\Debug\HelloWorld.csproj.CoreCompileInputs.cache
 E:\ASP.NET MVC\HelloWorld\obj\Debug\HelloWorld.csproj.CopyComplete
 E:\ASP.NET MVC\HelloWorld\obj\Debug\HelloWorld.dll
 E:\ASP.NET MVC\HelloWorld\obj\Debug\HelloWorld.pdb
-E:\ASP.NET MVC\HelloWorld\obj\Debug\HelloWorld.csprojAssemblyReference.cache
