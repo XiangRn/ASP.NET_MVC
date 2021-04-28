@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Models.Framework.Menu>
+
+<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+    <ul class="navbar-nav ">
+        @foreach (var item in Model)
+        {
+            if (item.Text == "Sản Phẩm")
+            {
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="/san-pham" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        @item.Text
+                    </a>
+                    @*cách 1 là dùng partialview*@
+                    @{Html.RenderAction("_HomeProductListMenu", "Home");}
+                    @*<div class="dropdown-menu" aria-labelledby="navbarDropdown">*@
+                        @*cách 2 là dùng viewbag*@
+                        @*@foreach (var i in ViewBag.ProductList.Where(y=>y.ParentID==null))
+                            {*@
+                        @*<a class="nav-link" href="/san-pham/@i.MetaTitle/@i.ID">@i.Name</a>*@
+
+
+                        @*}*@
+
+                    @*</div>*@
+                </li>
+
+            }
+            else
+            {
+
+
+                <li class="nav-item ">
+                    <a class="nav-link" href="@item.Link" target="@item.Target">@item.Text <span class="sr-only">(current)</span></a>
+                </li>
+
+
+            }
+
+
+
+            @*<li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Pages
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="nav-link" href="icon.html">404 Page</a>
+                        <a class="nav-link " href="typography.html">Typography</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Product
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="nav-link" href="product.html">Kids Toys</a>
+                        <a class="nav-link " href="product.html">Dolls</a>
+                        <a class="nav-link " href="product.html">Key Toys</a>
+                        <a class="nav-link " href="product.html">Boys Toys</a>
+                    </div>
+                </li>*@
+
+        }
+
+    </ul>
+</div>

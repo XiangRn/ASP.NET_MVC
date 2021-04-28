@@ -1,0 +1,181 @@
+﻿@model IEnumerable<Models.Framework.Productt>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Slide{
+    <div class="slider text-center">
+        <div class="callbacks_container">
+            <ul class="rslides" id="slider4">
+                <li>
+                    <div class="slider-img one-img">
+                        <div class="container">
+                            <div class="slider-info ">
+                                <h5>Pick The Best Toy For <br>Your Kid</h5>
+                                <div class="bottom-info">
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolorL orem ipsum dolor sit amet eget dolor</p>
+                                </div>
+                                <div class="outs_more-buttn">
+                                    <a href="about.html">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="slider-img two-img">
+                        <div class="container">
+                            <div class="slider-info ">
+                                <h5>Sort Toys And Teddy bears<br>For Kids</h5>
+                                <div class="bottom-info">
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolorL orem ipsum dolor sit amet eget dolor</p>
+                                </div>
+                                <div class="outs_more-buttn">
+                                    <a href="about.html">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="slider-img three-img">
+                        <div class="container">
+                            <div class="slider-info">
+                                <h5>Best Toys And Dolls<br> For Kids</h5>
+                                <div class="bottom-info">
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolorL orem ipsum dolor sit amet eget dolor</p>
+                                </div>
+                                <div class="outs_more-buttn">
+                                    <a href="about.html">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- This is here just to demonstrate the callbacks -->
+        <!-- <ul class="events">
+           <li>Example 4 callback events</li>
+           </ul>-->
+        <div class="clearfix"></div>
+    </div>
+
+}
+
+@section CustomerReview{
+    @Html.Partial("CustomerView")
+}
+@section BestNewProduct{
+    @Html.Partial("_HomeBestProduct")
+
+}
+
+@section NewArrivals{
+    @Html.Partial("_HomeNewArrivals")
+}
+
+@section LastedToys{
+    @Html.Partial("_LastedToys")
+}
+@section Premium{
+    <section class="premium py-lg-4 py-md-3 py-sm-3 py-3">
+        <div class="container py-lg-5 py-md-5 py-sm-4 py-3">
+            <h3 class="title clr text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">Premium Toys</h3>
+            <div class="row">
+                <div class="col-lg-6 agileits-toys-left"></div>
+                <div class="col-lg-6 agileits-toys-right">
+                    <div class="sub-agile-info-toys">
+                        <p>
+                            velit sagittis vehicula. Duis posuere
+                            ex in mollis iaculis. Suspendisse tincidunt
+                            velit sagittis vehicula. Duis posuere
+                            velit sagittis vehicula. Duis posuere
+                            ex in mollis iaculis. Suspendisse tincidunt
+                            velit sagittis vehicula. Duis posuere
+                        </p>
+                        <div class="clients_more-buttn">
+                            <a href="shop.html" class="mb-0">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-lg-4 mt-md-4 mt-3">
+                <div class="col-lg-6 agileits-toys-right">
+                    <div class="sub-agile-info-toys">
+                        <p>
+                            velit sagittis vehicula. Duis posuere
+                            ex in mollis iaculis. Suspendisse tincidunt
+                            velit sagittis vehicula. Duis posuere
+                            velit sagittis vehicula. Duis posuere
+                            ex in mollis iaculis. Suspendisse tincidunt
+                            velit sagittis vehicula. Duis posuere
+                        </p>
+                        <div class="clients_more-buttn ">
+                            <a href="shop.html" class="mb-0">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 agileits-toys-left"></div>
+            </div>
+        </div>
+    </section>
+}
+
+@section jsFooter{
+
+
+    <script src="~/Assets/Client/js/responsiveslides.min.js"></script>
+    <script>
+         // You can also use "$(window).load(function() {"
+         $(function () {
+         	// Slideshow 4
+         	$("#slider4").responsiveSlides({
+         		auto: true,
+         		pager:false,
+         		nav:true ,
+         		speed: 900,
+         		namespace: "callbacks",
+         		before: function () {
+         			$('.events').append("<li>before event fired.</li>");
+         		},
+         		after: function () {
+         			$('.events').append("<li>after event fired.</li>");
+         		}
+         	});
+
+         });
+    </script>
+    <!--// responsiveslides banner-->
+    <!--slider flexisel -->
+    <script src="~/Assets/Client/js/jquery.flexisel.js"></script>
+    <script>
+         $(window).load(function() {
+         	$("#flexiselDemo1").flexisel({
+         		visibleItems: 3,
+         		animationSpeed: 3000,
+         		autoPlay:true,
+         		autoPlaySpeed: 2000,
+         		pauseOnHover: true,
+         		enableResponsiveBreakpoints: true,
+         		responsiveBreakpoints: {
+         			portrait: {
+         				changePoint:480,
+         				visibleItems: 1
+         			},
+         			landscape: {
+         				changePoint:640,
+         				visibleItems:2
+         			},
+         			tablet: {
+         				changePoint:768,
+         				visibleItems: 2
+         			}
+         		}
+         	});
+
+         });
+    </script>
+    <!-- //slider flexisel -->
+}

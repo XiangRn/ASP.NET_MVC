@@ -3,6 +3,9 @@
     * Copyright 2013-2020 Start Bootstrap
     * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-sb-admin/blob/master/LICENSE)
     */
+$(function () {
+    $('#AlertBox').delay(1000).slideUp(500);
+});
     (function($) {
     "use strict";
 

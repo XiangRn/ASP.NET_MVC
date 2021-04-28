@@ -46,27 +46,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CKFinder, Version=2.6.0.2792, Culture=neutral, PublicKeyToken=579e7adc719a1423, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Users\PC\Downloads\ckfinder_aspnet_2.6.2.1\ckfinder\bin\Release\CKFinder.dll</HintPath>
+    <Reference Include="BotDetect, Version=4.4.2.0, Culture=neutral, PublicKeyToken=74616036388b765f, processorArchitecture=MSIL">
+      <HintPath>..\HelloWorld\packages\Captcha.4.4.2\lib\net35\BotDetect.dll</HintPath>
     </Reference>
-    <Reference Include="CKFinder_FileEditor, Version=2.1.0.1132, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Users\PC\Downloads\ckfinder_aspnet_2.6.2.1\ckfinder\bin\Release\CKFinder_FileEditor.dll</HintPath>
-    </Reference>
-    <Reference Include="CKFinder_ImageResize, Version=2.1.0.1132, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Users\PC\Downloads\ckfinder_aspnet_2.6.2.1\ckfinder\bin\Release\CKFinder_ImageResize.dll</HintPath>
-    </Reference>
-    <Reference Include="CKFinder_Watermark, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Users\PC\Downloads\ckfinder_aspnet_2.6.2.1\ckfinder\bin\Release\CKFinder_Watermark.dll</HintPath>
+    <Reference Include="BotDetect.Web.Mvc, Version=4.4.2.0, Culture=neutral, PublicKeyToken=74616036388b765f, processorArchitecture=MSIL">
+      <HintPath>..\HelloWorld\packages\Captcha.4.4.2\lib\net35\BotDetect.Web.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\HelloWorld\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\HelloWorld\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook, Version=6.0.10.0, Culture=neutral, PublicKeyToken=58cb4f2111d1e6de, processorArchitecture=MSIL">
+      <HintPath>..\HelloWorld\packages\Facebook.7.0.6\lib\net45\Facebook.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
@@ -77,6 +70,9 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.113.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\HelloWorld\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.113.3\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -149,24 +145,75 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
-    <Compile Include="Areas\Admin\Code\CustomMembershipProvider.cs" />
-    <Compile Include="Areas\Admin\Code\SessionHelper.cs" />
-    <Compile Include="Areas\Admin\Code\UserSession.cs" />
-    <Compile Include="Areas\Admin\Controllers\BaseController.cs" />
-    <Compile Include="Areas\Admin\Controllers\CategoryController.cs" />
-    <Compile Include="Areas\Admin\Controllers\CategoryyController.cs" />
-    <Compile Include="Areas\Admin\Controllers\ContentController.cs" />
-    <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
-    <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
-    <Compile Include="Areas\Admin\Controllers\UserController.cs" />
-    <Compile Include="Areas\Admin\Models\LoginModel.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\AccessControlRules.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\AssemblyInfo.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\CKFinderEvent.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\CKFinderEventArgs.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\CKFinderPlugin.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\CommandHandlers\CommandHandlerBase.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\CommandHandlers\CopyFilesCommandHandler.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\CommandHandlers\CreateFolderCommandHandler.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\CommandHandlers\DeleteFilesCommandHandler.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\CommandHandlers\DeleteFolderCommandHandler.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\CommandHandlers\DownloadFileCommandHandler.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\CommandHandlers\ErrorCommandHandler.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\CommandHandlers\FileUploadCommandHandler.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\CommandHandlers\GetFilesCommandHandler.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\CommandHandlers\GetFoldersCommandHandler.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\CommandHandlers\InitCommandHandler.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\CommandHandlers\LoadCookiesCommandHandler.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\CommandHandlers\MoveFilesCommandHandler.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\CommandHandlers\QuickUploadCommandHandler.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\CommandHandlers\RenameFileCommandHandler.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\CommandHandlers\RenameFolderCommandHandler.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\CommandHandlers\ThumbnailCommandHandler.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\CommandHandlers\XmlCommandHandlerBase.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\Config.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\Connector.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\ConnectorException.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\Errors.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\FolderHandler.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\ImageTools.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\Lang.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\OctreeQuantizer.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\Quantizer.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\RegexLib.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\RestartModule.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\Util.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\Connector\XmlUtil.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\FileBrowser.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\FileBrowserDesigner.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\Resources\Plugins\FileEditor\Properties\AssemblyInfo.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\Resources\Plugins\FileEditor\SaveFile.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\Resources\Plugins\ImageResize\ImageResize.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\Resources\Plugins\ImageResize\Properties\AssemblyInfo.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\Resources\Plugins\Watermark\Properties\AssemblyInfo.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\Resources\Plugins\Watermark\Watermark.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\Settings\AccessControl.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\Settings\AccessControlManager.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\Settings\ConfigFile.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\Settings\Images.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\Settings\ResourceType.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\Settings\ResourceTypeManager.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\Settings\Thumbnails.cs" />
+    <Compile Include="Assets\admin\js\ckfinder\_source\TriStateBool.cs" />
     <Compile Include="Common\CommonConstants.cs" />
     <Compile Include="Common\Encryptor.cs" />
-    <Compile Include="Controllers\HomeClientController.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\CartController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CartItem.cs" />
+    <Compile Include="Models\DistrictModel.cs" />
+    <Compile Include="Models\LoginModel.cs" />
+    <Compile Include="Models\ProvinceModel.cs" />
+    <Compile Include="Models\RegisterModel.cs" />
+    <Compile Include="Models\TownModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -481,65 +528,6 @@
     <Content Include="Assets\admin\js\ckeditor\plugins\wsc\lang\zh.js" />
     <Content Include="Assets\admin\js\ckeditor\plugins\wsc\plugin.js" />
     <Content Include="Assets\admin\js\ckeditor\plugins\wsc\skins\moono-lisa\wsc.css" />
-    <Content Include="Assets\admin\js\ckeditor\samples\css\samples.css" />
-    <Content Include="Assets\admin\js\ckeditor\samples\img\github-top.png" />
-    <Content Include="Assets\admin\js\ckeditor\samples\img\header-bg.png" />
-    <Content Include="Assets\admin\js\ckeditor\samples\img\header-separator.png" />
-    <Content Include="Assets\admin\js\ckeditor\samples\img\logo.png" />
-    <Content Include="Assets\admin\js\ckeditor\samples\img\logo.svg" />
-    <Content Include="Assets\admin\js\ckeditor\samples\img\navigation-tip.png" />
-    <Content Include="Assets\admin\js\ckeditor\samples\index.html" />
-    <Content Include="Assets\admin\js\ckeditor\samples\js\sample.js" />
-    <Content Include="Assets\admin\js\ckeditor\samples\js\sf.js" />
-    <Content Include="Assets\admin\js\ckeditor\samples\old\ajax.html" />
-    <Content Include="Assets\admin\js\ckeditor\samples\old\api.html" />
-    <Content Include="Assets\admin\js\ckeditor\samples\old\appendto.html" />
-    <Content Include="Assets\admin\js\ckeditor\samples\old\assets\inlineall\logo.png" />
-    <Content Include="Assets\admin\js\ckeditor\samples\old\assets\outputxhtml\outputxhtml.css" />
-    <Content Include="Assets\admin\js\ckeditor\samples\old\assets\posteddata.php" />
-    <Content Include="Assets\admin\js\ckeditor\samples\old\assets\sample.jpg" />
-    <Content Include="Assets\admin\js\ckeditor\samples\old\assets\uilanguages\languages.js" />
-    <Content Include="Assets\admin\js\ckeditor\samples\old\datafiltering.html" />
-    <Content Include="Assets\admin\js\ckeditor\samples\old\dialog\assets\my_dialog.js" />
-    <Content Include="Assets\admin\js\ckeditor\samples\old\dialog\dialog.html" />
-    <Content Include="Assets\admin\js\ckeditor\samples\old\divreplace.html" />
-    <Content Include="Assets\admin\js\ckeditor\samples\old\enterkey\enterkey.html" />
-    <Content Include="Assets\admin\js\ckeditor\samples\old\htmlwriter\assets\outputforflash\outputforflash.swf" />
-    <Content Include="Assets\admin\js\ckeditor\samples\old\htmlwriter\assets\outputforflash\swfobject.js" />
-    <Content Include="Assets\admin\js\ckeditor\samples\old\htmlwriter\outputforflash.html" />
-    <Content Include="Assets\admin\js\ckeditor\samples\old\htmlwriter\outputhtml.html" />
-    <Content Include="Assets\admin\js\ckeditor\samples\old\index.html" />
-    <Content Include="Assets\admin\js\ckeditor\samples\old\inlineall.html" />
-    <Content Include="Assets\admin\js\ckeditor\samples\old\inlinebycode.html" />
-    <Content Include="Assets\admin\js\ckeditor\samples\old\inlinetextarea.html" />
-    <Content Include="Assets\admin\js\ckeditor\samples\old\jquery.html" />
-    <Content Include="Assets\admin\js\ckeditor\samples\old\magicline\magicline.html" />
-    <Content Include="Assets\admin\js\ckeditor\samples\old\readonly.html" />
-    <Content Include="Assets\admin\js\ckeditor\samples\old\replacebyclass.html" />
-    <Content Include="Assets\admin\js\ckeditor\samples\old\replacebycode.html" />
-    <Content Include="Assets\admin\js\ckeditor\samples\old\sample.css" />
-    <Content Include="Assets\admin\js\ckeditor\samples\old\sample.js" />
-    <Content Include="Assets\admin\js\ckeditor\samples\old\sample_posteddata.php" />
-    <Content Include="Assets\admin\js\ckeditor\samples\old\tabindex.html" />
-    <Content Include="Assets\admin\js\ckeditor\samples\old\toolbar\toolbar.html" />
-    <Content Include="Assets\admin\js\ckeditor\samples\old\uicolor.html" />
-    <Content Include="Assets\admin\js\ckeditor\samples\old\uilanguages.html" />
-    <Content Include="Assets\admin\js\ckeditor\samples\old\wysiwygarea\fullpage.html" />
-    <Content Include="Assets\admin\js\ckeditor\samples\old\xhtmlstyle.html" />
-    <Content Include="Assets\admin\js\ckeditor\samples\toolbarconfigurator\css\fontello.css" />
-    <Content Include="Assets\admin\js\ckeditor\samples\toolbarconfigurator\font\fontello.svg" />
-    <Content Include="Assets\admin\js\ckeditor\samples\toolbarconfigurator\font\LICENSE.txt" />
-    <Content Include="Assets\admin\js\ckeditor\samples\toolbarconfigurator\index.html" />
-    <Content Include="Assets\admin\js\ckeditor\samples\toolbarconfigurator\js\abstracttoolbarmodifier.js" />
-    <Content Include="Assets\admin\js\ckeditor\samples\toolbarconfigurator\js\fulltoolbareditor.js" />
-    <Content Include="Assets\admin\js\ckeditor\samples\toolbarconfigurator\js\toolbarmodifier.js" />
-    <Content Include="Assets\admin\js\ckeditor\samples\toolbarconfigurator\js\toolbartextmodifier.js" />
-    <Content Include="Assets\admin\js\ckeditor\samples\toolbarconfigurator\lib\codemirror\codemirror.css" />
-    <Content Include="Assets\admin\js\ckeditor\samples\toolbarconfigurator\lib\codemirror\codemirror.js" />
-    <Content Include="Assets\admin\js\ckeditor\samples\toolbarconfigurator\lib\codemirror\javascript.js" />
-    <Content Include="Assets\admin\js\ckeditor\samples\toolbarconfigurator\lib\codemirror\neo.css" />
-    <Content Include="Assets\admin\js\ckeditor\samples\toolbarconfigurator\lib\codemirror\show-hint.css" />
-    <Content Include="Assets\admin\js\ckeditor\samples\toolbarconfigurator\lib\codemirror\show-hint.js" />
     <Content Include="Assets\admin\js\ckeditor\skins\moono-lisa\dialog.css" />
     <Content Include="Assets\admin\js\ckeditor\skins\moono-lisa\dialog_ie.css" />
     <Content Include="Assets\admin\js\ckeditor\skins\moono-lisa\dialog_ie8.css" />
@@ -1208,6 +1196,32 @@
     <Content Include="Assets\admin\js\ckfinder\skins\v1\skin.js" />
     <Content Include="Assets\admin\js\ckfinder\skins\v1\uipanel.css" />
     <Content Include="Assets\admin\js\ckfinder\translations.txt" />
+    <Content Include="Assets\admin\js\ckfinder\_samples\aspx\popup.aspx" />
+    <Content Include="Assets\admin\js\ckfinder\_samples\aspx\popups.aspx" />
+    <Content Include="Assets\admin\js\ckfinder\_samples\aspx\standalone.aspx" />
+    <Content Include="Assets\admin\js\ckfinder\_samples\ckeditor.html" />
+    <Content Include="Assets\admin\js\ckfinder\_samples\index.html" />
+    <Content Include="Assets\admin\js\ckfinder\_samples\popup.html" />
+    <Content Include="Assets\admin\js\ckfinder\_samples\popups.html" />
+    <Content Include="Assets\admin\js\ckfinder\_samples\public_api.html" />
+    <Content Include="Assets\admin\js\ckfinder\_samples\sample.css" />
+    <Content Include="Assets\admin\js\ckfinder\_samples\skin_bootstrap.html" />
+    <Content Include="Assets\admin\js\ckfinder\_samples\skin_v1.html" />
+    <Content Include="Assets\admin\js\ckfinder\_samples\standalone.html" />
+    <Content Include="Assets\admin\js\ckfinder\_samples\standalone_v1.html" />
+    <Content Include="Assets\admin\js\ckfinder\_source\CKFinder.ico" />
+    <Content Include="Assets\admin\js\ckfinder\_source\CKFinder.Net.sln" />
+    <Content Include="Assets\admin\js\ckfinder\_source\Resources\Plugins\FileEditor\CKFinder.ico" />
+    <Content Include="Assets\admin\js\ckfinder\_source\Resources\Plugins\FileEditor\FileEditor.sln" />
+    <Content Include="Assets\admin\js\ckfinder\_source\Resources\Plugins\ImageResize\CKFinder.ico" />
+    <Content Include="Assets\admin\js\ckfinder\_source\Resources\Plugins\ImageResize\ImageResize.sln" />
+    <Content Include="Assets\admin\js\ckfinder\_source\Resources\Plugins\Watermark\CKFinder.ico" />
+    <Content Include="Assets\admin\js\ckfinder\_source\Resources\Plugins\Watermark\Watermark.sln" />
+    <Content Include="Assets\Client\css\bootstrap-social.css" />
+    <Content Include="Assets\Client\css\jquery-ui.css" />
+    <Content Include="Assets\Client\data\Provinces_Data.xml" />
+    <Content Include="Assets\Client\js\controller\choosebuttonRandL.js" />
+    <Content Include="Assets\Client\js\controller\contactController.js" />
     <Content Include="Assets\admin\js\controller\userController.js" />
     <Content Include="Assets\admin\js\scripts.js" />
     <Content Include="Assets\admin\scripts\build-assets.js" />
@@ -1222,6 +1236,75 @@
     <Content Include="Assets\admin\scripts\sb-watch.js" />
     <Content Include="Assets\admin\scripts\start-debug.js" />
     <Content Include="Assets\admin\scripts\start.js" />
+    <Content Include="Assets\Client\css\bootstrap.min.css" />
+    <Content Include="Assets\Client\css\checkout.css" />
+    <Content Include="Assets\Client\css\creditly.css" />
+    <Content Include="Assets\Client\css\easy-responsive-tabs.css" />
+    <Content Include="Assets\Client\css\flexslider.css" />
+    <Content Include="Assets\Client\css\fontawesome-all.min.css" />
+    <Content Include="Assets\Client\css\jquery-ui1.css" />
+    <Content Include="Assets\Client\css\shop.css" />
+    <Content Include="Assets\Client\css\style.css" />
+    <Content Include="Assets\Client\images\a1.jpg" />
+    <Content Include="Assets\Client\images\a2.jpg" />
+    <Content Include="Assets\Client\images\a3.jpg" />
+    <Content Include="Assets\Client\images\a4.jpg" />
+    <Content Include="Assets\Client\images\a5.jpg" />
+    <Content Include="Assets\Client\images\a6.jpg" />
+    <Content Include="Assets\Client\images\arr.png" />
+    <Content Include="Assets\Client\images\b1.jpg" />
+    <Content Include="Assets\Client\images\b2.jpg" />
+    <Content Include="Assets\Client\images\b3.jpg" />
+    <Content Include="Assets\Client\images\cc1.jpg" />
+    <Content Include="Assets\Client\images\cc2.jpg" />
+    <Content Include="Assets\Client\images\close.png" />
+    <Content Include="Assets\Client\images\close_1.jpg" />
+    <Content Include="Assets\Client\images\f1.jpg" />
+    <Content Include="Assets\Client\images\f2.jpg" />
+    <Content Include="Assets\Client\images\f3.jpg" />
+    <Content Include="Assets\Client\images\g1.jpg" />
+    <Content Include="Assets\Client\images\g2.jpg" />
+    <Content Include="Assets\Client\images\g3.jpg" />
+    <Content Include="Assets\Client\images\g4.jpg" />
+    <Content Include="Assets\Client\images\left-arrow.png" />
+    <Content Include="Assets\Client\images\next.png" />
+    <Content Include="Assets\Client\images\p1.jpg" />
+    <Content Include="Assets\Client\images\p2.jpg" />
+    <Content Include="Assets\Client\images\p3.jpg" />
+    <Content Include="Assets\Client\images\p4.jpg" />
+    <Content Include="Assets\Client\images\paypal.png" />
+    <Content Include="Assets\Client\images\pp1.png" />
+    <Content Include="Assets\Client\images\right-arrow.png" />
+    <Content Include="Assets\Client\images\search.png" />
+    <Content Include="Assets\Client\images\t1.jpg" />
+    <Content Include="Assets\Client\images\t2.jpg" />
+    <Content Include="Assets\Client\images\t3.jpg" />
+    <Content Include="Assets\Client\images\team1.jpg" />
+    <Content Include="Assets\Client\images\tt1.jpg" />
+    <Content Include="Assets\Client\images\tt2.jpg" />
+    <Content Include="Assets\Client\images\typo.jpg" />
+    <Content Include="Assets\Client\js\bootstrap.min.js" />
+    <Content Include="Assets\Client\js\controller\cartcontroller.js" />
+    <Content Include="Assets\Client\js\controller\login.js" />
+    <Content Include="Assets\Client\js\controller\Logout.js" />
+    <Content Include="Assets\Client\js\controller\searchController.js" />
+    <Content Include="Assets\Client\js\controller\userController.js" />
+    <Content Include="Assets\Client\js\creditly.js" />
+    <Content Include="Assets\Client\js\easing.js" />
+    <Content Include="Assets\Client\js\easy-responsive-tabs.js" />
+    <Content Include="Assets\Client\js\imagezoom.js" />
+    <Content Include="Assets\Client\js\jquery-2.2.3.min.js" />
+    <Content Include="Assets\Client\js\jquery-ui.js" />
+    <Content Include="Assets\Client\js\jquery.flexisel.js" />
+    <Content Include="Assets\Client\js\jquery.flexslider.js" />
+    <Content Include="Assets\Client\js\minicart.js" />
+    <Content Include="Assets\Client\js\move-top.js" />
+    <Content Include="Assets\Client\js\responsiveslides.min.js" />
+    <Content Include="Assets\Client\template\feedback.html" />
+    <Content Include="Assets\Client\template\neworder.html" />
+    <Content Include="Assets\Client\webfonts\fa-brands-400.svg" />
+    <Content Include="Assets\Client\webfonts\fa-regular-400.svg" />
+    <Content Include="Assets\Client\webfonts\fa-solid-900.svg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -1233,9 +1316,6 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Areas\Admin\Views\web.config" />
-    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
-    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
     <Content Include="Assets\admin\scss\layout\_authentication.scss" />
     <Content Include="Assets\admin\scss\layout\_dashboard-default.scss" />
     <Content Include="Assets\admin\scss\layout\_dashboard-fixed.scss" />
@@ -1250,22 +1330,18 @@
     <Content Include="Assets\admin\scss\variables\_spacing.scss" />
     <Content Include="Assets\admin\scss\_global.scss" />
     <Content Include="Assets\admin\scss\_variables.scss" />
-    <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Shared\_LeftMenu.cshtml" />
-    <Content Include="Areas\Admin\Views\Category\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Category\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\Login\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\User\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\User\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\User\Update.cshtml" />
-    <Content Include="Areas\Admin\Views\Categoryy\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\Content\Create.cshtml" />
-    <Content Include="Assets\admin\js\ckfinder\plugins\fileeditor\codemirror\LICENSE" />
-    <Content Include="Assets\admin\js\ckfinder\skins\bootstrap\assets\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Assets\admin\js\ckfinder\skins\bootstrap\assets\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="Assets\admin\js\ckfinder\skins\bootstrap\assets\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="Assets\admin\js\ckfinder\skins\bootstrap\assets\fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="Assets\admin\js\ckfinder\userfiles\.htaccess" />
+    <Content Include="Assets\Client\webfonts\fa-brands-400.eot" />
+    <Content Include="Assets\Client\webfonts\fa-brands-400.ttf" />
+    <Content Include="Assets\Client\webfonts\fa-brands-400.woff" />
+    <Content Include="Assets\Client\webfonts\fa-brands-400.woff2" />
+    <Content Include="Assets\Client\webfonts\fa-regular-400.eot" />
+    <Content Include="Assets\Client\webfonts\fa-regular-400.ttf" />
+    <Content Include="Assets\Client\webfonts\fa-regular-400.woff" />
+    <Content Include="Assets\Client\webfonts\fa-regular-400.woff2" />
+    <Content Include="Assets\Client\webfonts\fa-solid-900.eot" />
+    <Content Include="Assets\Client\webfonts\fa-solid-900.ttf" />
+    <Content Include="Assets\Client\webfonts\fa-solid-900.woff" />
+    <Content Include="Assets\Client\webfonts\fa-solid-900.woff2" />
     <Content Include="Assets\admin\js\ckeditor\CHANGES.md" />
     <Content Include="Assets\admin\js\ckeditor\LICENSE.md" />
     <Content Include="Assets\admin\js\ckeditor\plugins\scayt\CHANGELOG.md" />
@@ -1274,16 +1350,18 @@
     <Content Include="Assets\admin\js\ckeditor\plugins\wsc\LICENSE.md" />
     <Content Include="Assets\admin\js\ckeditor\plugins\wsc\README.md" />
     <Content Include="Assets\admin\js\ckeditor\README.md" />
-    <Content Include="Assets\admin\js\ckeditor\samples\old\htmlwriter\assets\outputforflash\outputforflash.fla" />
-    <Content Include="Assets\admin\js\ckeditor\samples\toolbarconfigurator\font\config.json" />
-    <Content Include="Assets\admin\js\ckeditor\samples\toolbarconfigurator\font\fontello.eot" />
-    <Content Include="Assets\admin\js\ckeditor\samples\toolbarconfigurator\font\fontello.ttf" />
-    <Content Include="Assets\admin\js\ckeditor\samples\toolbarconfigurator\font\fontello.woff" />
-    <Content Include="Assets\admin\js\ckeditor\samples\toolbarconfigurator\lib\codemirror\LICENSE" />
     <Content Include="Assets\admin\js\ckeditor\skins\moono-lisa\readme.md" />
-    <Content Include="Areas\Admin\Views\Shared\_TopMenu.cshtml" />
-    <Content Include="Areas\Admin\Views\Content\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Content\Edit.cshtml" />
+    <Content Include="Assets\admin\js\ckfinder\plugins\fileeditor\codemirror\LICENSE" />
+    <Content Include="Assets\admin\js\ckfinder\skins\bootstrap\assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Assets\admin\js\ckfinder\skins\bootstrap\assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Assets\admin\js\ckfinder\skins\bootstrap\assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Assets\admin\js\ckfinder\skins\bootstrap\assets\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Assets\admin\js\ckfinder\userfiles\.htaccess" />
+    <Content Include="Assets\admin\js\ckfinder\_source\CKFinder.Net.csproj" />
+    <Content Include="Assets\admin\js\ckfinder\_source\CKFinderKey.snk" />
+    <Content Include="Assets\admin\js\ckfinder\_source\Resources\Plugins\FileEditor\FileEditor.csproj" />
+    <Content Include="Assets\admin\js\ckfinder\_source\Resources\Plugins\ImageResize\ImageResize.csproj" />
+    <Content Include="Assets\admin\js\ckfinder\_source\Resources\Plugins\Watermark\Watermark.csproj" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -1304,19 +1382,30 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\HomeClient\About.cshtml" />
-    <Content Include="Views\HomeClient\Contact.cshtml" />
-    <Content Include="Views\HomeClient\Index.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Product\Category.cshtml" />
+    <Content Include="Views\Product\Detail.cshtml" />
+    <Content Include="Views\About\Index.cshtml" />
+    <Content Include="Views\Cart\Index.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\About\Create.cshtml" />
+    <Content Include="Views\Shared\_HomeBestProduct.cshtml" />
+    <Content Include="Views\Shared\_HomeNewArrivals.cshtml" />
+    <Content Include="Views\Shared\_HomeProductListMenu.cshtml" />
+    <Content Include="Views\Shared\_LastedToys.cshtml" />
+    <Content Include="Views\Shared\CustomerView.cshtml" />
+    <Content Include="Views\Shared\Footer.cshtml" />
+    <Content Include="Views\Shared\MainMenu.cshtml" />
+    <Content Include="Views\Home\Register.cshtml" />
+    <Content Include="Views\User\Login.cshtml" />
+    <Content Include="Views\Product\Search.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Data\" />
-    <Folder Include="Areas\Admin\Views\Base\" />
-    <Folder Include="Assets\Client\" />
     <Folder Include="Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -1332,9 +1421,17 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{a78139e8-ec6b-4cb5-94ec-e933f46ea482}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Models\Models.csproj">
       <Project>{7a3cfde4-cd92-4a3b-9354-b51a6d0d47ca}</Project>
       <Name>Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StaticResource\StaticResource.csproj">
+      <Project>{87536678-06a5-4d23-9f3b-f11116496563}</Project>
+      <Name>StaticResource</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
@@ -1372,8 +1469,10 @@
     <Error Condition="!Exists('..\HelloWorld\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\HelloWorld\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
     <Error Condition="!Exists('..\HelloWorld\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\HelloWorld\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
     <Error Condition="!Exists('..\HelloWorld\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\HelloWorld\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\HelloWorld\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.113.3\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\HelloWorld\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.113.3\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
   </Target>
   <Import Project="..\HelloWorld\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\HelloWorld\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="..\HelloWorld\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.113.3\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\HelloWorld\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.113.3\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
