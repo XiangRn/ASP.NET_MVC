@@ -13,12 +13,14 @@ namespace OnlineShop.Areas.Admin.Controllers
     {
         UserDao dao = new UserDao();
       OnlineShopDBContext db = new OnlineShopDBContext();
+        [HasCredential(RoleID = "VIEW_USER")]
         public ActionResult Index(string searchString, int page =1, int pagesize=2)
         {
             var result = dao.ListAll(searchString, page,pagesize);
             ViewBag.searchString = searchString;
             return View(result);
         }
+        [HasCredential(RoleID = "VIEW_USER")]
         public ActionResult LUser(int page = 1, int pagesize = 2)
         {
             var result = dao.ListEx( page, pagesize);
@@ -27,11 +29,13 @@ namespace OnlineShop.Areas.Admin.Controllers
         }
         // GET: Admin/User
         [HttpGet]//Get là tải trang giao diện
+        [HasCredential(RoleID = "ADD_USER")]
         public ActionResult Create()
         {
             return View();
         }
         [HttpPost]//Post là post lên
+        [HasCredential(RoleID = "ADD_USER")]
         public ActionResult Create(User user)
         {
             if (ModelState.IsValid)
@@ -90,12 +94,14 @@ namespace OnlineShop.Areas.Admin.Controllers
             return View(user);
         }
         [HttpGet]
+        [HasCredential(RoleID = "EDIT_USER")]
         public ActionResult Update(int id)
         {           
                 return View(dao.GetUserID(id));       
            
         }
         [HttpPost]
+        [HasCredential(RoleID = "EDIT_USER")]
         public ActionResult Update(User user)
         {
             if (ModelState.IsValid)
@@ -124,7 +130,7 @@ namespace OnlineShop.Areas.Admin.Controllers
             return View();
            
         }
-     
+        [HasCredential(RoleID = "DELETE_USER")]
         public ActionResult Delete(int id)
         {
            
@@ -137,7 +143,8 @@ namespace OnlineShop.Areas.Admin.Controllers
                 return View();
             }
         }
-        [HttpPost]      
+        [HttpPost]
+        [HasCredential(RoleID = "EDIT_USER")]
         public JsonResult ChangeStatus(long id)
         {
             var result = dao.ChangeStatus(id);

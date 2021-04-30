@@ -9,6 +9,8 @@ using OnlineShop.Areas.Admin.Code;
 using System.Web.Security;
 using Models.DAO;
 using OnlineShop.Common;
+using Common;
+
 namespace OnlineShop.Areas.Admin.Controllers
 {
     public class LoginController : Controller
@@ -65,15 +67,19 @@ namespace OnlineShop.Areas.Admin.Controllers
             if (ModelState.IsValid)
             {
                 UserDao dao = new UserDao();
-                var result = dao.Login(user.UserName, Encryptor.EncMD5(user.Password));
+                var result = dao.Login(user.UserName, Encryptor.EncMD5(user.Password),true);
                 if (result == 1)
                 {
-                   // FormsAuthentication.SetAuthCookie(account.UserName, account.RememberMe);
+                    // FormsAuthentication.SetAuthCookie(account.UserName, account.RememberMe);
                     //var sessionUser = new UserSession();
                     //sessionUser.UserName = user.UserName;
                     //sessionUser.Id = user.ID;
                     //Session.Add(CommonConstants.USER_SESSION, sessionUser);
-                  Session["UserID"] = user.Name;
+                    user.GroupID = db.Users.SingleOrDefault(x => x.UserName == user.UserName).GroupID;
+                    Session.Add(Common.CommonConstants.USER_SESSION, user);
+                    var listCredentials = dao.GetListCredential(user.UserName);
+                    Session.Add(Common.CommonConstants.SESSION_CREDENTIALS, listCredentials);
+            
                     return RedirectToAction("Index", "Home");
                 }
                 else if (result == 0)
@@ -84,6 +90,9 @@ namespace OnlineShop.Areas.Admin.Controllers
                 else if (result == -1)
                 {
                     ModelState.AddModelError("", "Tài khoản bị vô hiệu hóa");
+                }else if (result == -3)
+                {
+                    ModelState.AddModelError("", "Tài khoản của bạn không có quyền đăng nhập admin");
                 }
                 else
                 {

@@ -66,7 +66,7 @@ namespace Models.DAO
             }
            
         }
-        public int Login(string username, string password)
+        public int Login(string username, string password, bool isLoginAdmin=false)
         {
             
             var result = db.Users.SingleOrDefault(x=>x.UserName==username);
@@ -78,22 +78,52 @@ namespace Models.DAO
             }
             else
             {
-                if (result.Status == false)
+                if (isLoginAdmin == true )
                 {
-                    return -1;
-                }
-                else
-                {
-                    if (result.Password == password)
+                    if (result.GroupID == Common.CommonConstant.ADMIN_GROUP || result.GroupID == Common.CommonConstant.MOD_GROUP)
                     {
-                        return 1;
+                        if (result.Status == false)
+                        {
+                            return -1;
+                        }
+                        else
+                        {
+                            if (result.Password == password)
+                            {
+                                return 1;
+                            }
+                            else
+                            {
+                                return -2;
+                            }
+
+                        }
                     }
                     else
                     {
-                        return -2;
+                        return -3;
                     }
-
                 }
+                else
+                {
+                    if (result.Status == false)
+                    {
+                        return -1;
+                    }
+                    else
+                    {
+                        if (result.Password == password)
+                        {
+                            return 1;
+                        }
+                        else
+                        {
+                            return -2;
+                        }
+
+                    }
+                }
+                
             }
           
         }
@@ -148,6 +178,12 @@ namespace Models.DAO
         public bool checkAccountIsActive(string username)
         {
             return db.Users.SingleOrDefault(x => x.UserName == username).Status==false;
+        }
+        public List<string> GetListCredential(string username)
+        {
+            var user = db.Users.SingleOrDefault(x => x.UserName == username);
+            return db.Database.SqlQuery<string>("select a.RoleID from " +
+                "[Credential] a join UserGroup b on b.ID=a.UserGroupID join Role c on c.ID=a.RoleID where b.ID=@p0",user.GroupID).ToList();
         }
     }
 }

@@ -1,0 +1,59 @@
+﻿
+
+@using PagedList.Mvc
+@model PagedList.IPagedList<Models.Framework.Content>
+@{
+    ViewBag.Title = "LUser";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section slide{
+    <div class="inner_page-banner one-img">
+    </div>
+    <!--//banner -->
+    <!-- short -->
+    <div class="using-border py-3">
+        <div class="inner_breadcrumb  ml-4">
+            <ul class="short_ls">
+                <li>
+                    <a href="/trang-chu">Trang Chủ</a>
+                    <span>/ /</span>
+                </li>
+                <li><a href="/san-pham">Tin Tức</a></li>
+            </ul>
+        </div>
+    </div>
+}
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>LUser</title>
+</head>
+<body>
+   
+    <div class="content">
+
+        @foreach (var item in Model)
+        {
+            <div class="image group">
+                <div class="grid images_3_of_1">
+                    <img src="@item.Image" alt="" width="50" height="50" />
+                </div>
+                <div class="grid news_desc">
+                    <h3><a href="/tin-tuc/@item.MetaTittle-@item.ID">@item.Name </a></h3>
+                    <h4>Posted on @item.CreatedDate by <span><a href="#">@item.CreatedBy</a></span></h4>
+                    @item.Description
+                </div>
+            </div>
+        }
+        @Html.PagedListPager(Model, page => Url.Action("LContent", new { page }))
+    </div>
+</body>
+</html>
+
+@section jsFooter{
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+
+
+}

@@ -3,3 +3,4 @@ E:\ASP.NET MVC\Common\bin\Debug\Common.pdb
 E:\ASP.NET MVC\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
 E:\ASP.NET MVC\Common\obj\Debug\Common.dll
 E:\ASP.NET MVC\Common\obj\Debug\Common.pdb
+E:\ASP.NET MVC\Common\obj\Debug\Common.csprojAssemblyReference.cache

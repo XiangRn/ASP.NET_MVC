@@ -60,7 +60,7 @@ namespace OnlineShop.Areas.Admin.Controllers
             {
                 try
                 {
-                    if (dao.Edit(content))
+                    if (dao.Edit(content)>0)
                     {
                         return RedirectToAction("Index","Content");
                     }
@@ -90,6 +90,7 @@ namespace OnlineShop.Areas.Admin.Controllers
             if (ModelState.IsValid)
             {
                 content.CreatedBy = Session["UserID"].ToString();
+                content.Language = Session["CurrentCulture"].ToString();
                 dao.Insert(content);
                 return RedirectToAction("Index");
             }

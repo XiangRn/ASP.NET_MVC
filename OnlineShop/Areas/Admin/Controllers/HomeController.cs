@@ -16,7 +16,7 @@ namespace OnlineShop.Areas.Admin.Controllers
      
         public ActionResult Index()
         {
-            var session = Session["UserID"];
+            var session = Session[Common.CommonConstants.USER_SESSION];
             if (session != null)
             {
                 return View();

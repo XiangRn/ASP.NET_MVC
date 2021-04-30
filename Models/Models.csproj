@@ -84,6 +84,7 @@
     <Compile Include="Framework\Contact.cs" />
     <Compile Include="Framework\Content.cs" />
     <Compile Include="Framework\ContentTag.cs" />
+    <Compile Include="Framework\Credential.cs" />
     <Compile Include="Framework\Feedback.cs" />
     <Compile Include="Framework\Footer.cs" />
     <Compile Include="Framework\Menu.cs" />
@@ -93,11 +94,13 @@
     <Compile Include="Framework\OrderDetail.cs" />
     <Compile Include="Framework\ProductCategory.cs" />
     <Compile Include="Framework\Productt.cs" />
+    <Compile Include="Framework\Role.cs" />
     <Compile Include="Framework\Slide.cs" />
     <Compile Include="Framework\sysdiagram.cs" />
     <Compile Include="Framework\SystemConfig.cs" />
     <Compile Include="Framework\Tag.cs" />
     <Compile Include="Framework\User.cs" />
+    <Compile Include="Framework\UserGroup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

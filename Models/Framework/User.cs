@@ -22,6 +22,9 @@
         [DisplayName("Mật Khẩu")]
         public string Password { get; set; }
 
+        [StringLength(20)]
+        public string GroupID { get; set; }
+
         [StringLength(50)]
         [DisplayName("Tên")]
         public string Name { get; set; }

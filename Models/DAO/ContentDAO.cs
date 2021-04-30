@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Models.Framework;
 using Common;
+using PagedList;
 namespace Models.DAO
 {
    public class ContentDAO
@@ -18,29 +19,53 @@ namespace Models.DAO
         {
             return db.Contents.SqlQuery("select * from Content").ToList();
         }
+      
+        public IEnumerable<Content> ListEx(int page, int pagesize)
+        {
+            return db.Contents.SqlQuery("select * from [Content]").ToPagedList(page, pagesize);
+        }
+        public IEnumerable<Content> DetailTags(string tagID,int page, int pagesize)
+        {
+            return db.Contents.SqlQuery("select * from [Content] where ID= any(select ContentID from ContentTag where TagID=@p0)",tagID).ToPagedList(page, pagesize);
+        }
         public Content GetById(long id)
         {
             return db.Contents.SqlQuery("select * from Content where ID=@p0",id).SingleOrDefault();
         }
-        public bool Edit(Content content)
+        public long Edit(Content content)
         {
-            List<object> lst = new List<object>();
-            lst.Add(content.Name);
-            lst.Add(content.MetaTittle);
-            lst.Add(content.Description);
-            lst.Add(content.Image);
-            lst.Add(content.CategoryID);
-            lst.Add(content.ID);
-            object[] ls = lst.ToArray();
-            var result = db.Database.ExecuteSqlCommand("update Content set Name=@p0,MetaTittle=@p1, Description=@p2, Image=@p3, CategoryID=@p4 where ID=@p5", ls);
-            if(result > 0)
+            //xử lý Alias
+            if (string.IsNullOrEmpty(content.MetaTittle))
             {
-                return true;
+                content.MetaTittle = StringHelper.ToUnsignString(content.Name);
             }
-            else
+            //Xử lý Tags
+            content.CreatedDate = DateTime.Now;      
+            db.SaveChanges();
+            if (!string.IsNullOrEmpty(content.Tags))
             {
-                return false;
+                this.RemoveAllContentTag(content.ID);
+                string[] tags = content.Tags.Split(',');
+                foreach (var item in tags)
+                {
+                    var tagID = StringHelper.ToUnsignString(item);
+                    var tagexisted = this.CheckTags(tagID);
+                    if (!tagexisted)
+                    {
+                        this.InsertTags(tagID, item);
+                    }
+
+                    //insert to content tag
+                    this.InsertContentTags(content.ID, tagID);
+
+                }
             }
+            return content.ID;
+        }
+        public void RemoveAllContentTag(long contentID)
+        {
+            db.ContentTags.Remove(db.ContentTags.Find(contentID));
+            db.SaveChanges();
         }
         public bool Create(Content content)
         {
@@ -114,6 +139,14 @@ namespace Models.DAO
         public bool CheckTags(string id)
         {
             return db.Tags.Count(x => x.ID == id) > 0;
+        }
+        public Content getID(long id)
+        {
+            return db.Contents.Find(id);
+        }
+        public List<Tag> ListTags(long contentID)
+        {
+            return db.Tags.SqlQuery("select * from Tag where ID= ANY (select TagID from ContentTag where ContentID = @p0)",contentID).ToList();
         }
     }
 }

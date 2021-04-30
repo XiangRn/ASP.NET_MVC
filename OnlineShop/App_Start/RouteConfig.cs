@@ -36,11 +36,23 @@ namespace OnlineShop
               namespaces: new[] { "OnlineShop.Controllers" }
           );
             routes.MapRoute(
+              name: "Content Detail",
+              url: "tin-tuc/{meltatitle}-{id}",
+              defaults: new { controller = "Content", action = "Details", id = UrlParameter.Optional },
+              namespaces: new[] { "OnlineShop.Controllers" }
+          );
+            routes.MapRoute(
           name: "About",
           url: "gioi-thieu",
           defaults: new { controller = "Contact", action = "Index", id = UrlParameter.Optional },
           namespaces: new[] { "OnlineShop.Controllers" }
       );
+            routes.MapRoute(
+        name: "News",
+        url: "tin-tuc",
+        defaults: new { controller = "Content", action = "LContent", id = UrlParameter.Optional },
+        namespaces: new[] { "OnlineShop.Controllers" }
+    );
             routes.MapRoute(
         name: "Contact",
         url: "lien-he",
