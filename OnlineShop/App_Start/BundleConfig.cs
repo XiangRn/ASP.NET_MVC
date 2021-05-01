@@ -22,9 +22,19 @@ namespace OnlineShop
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+            bundles.Add(new StyleBundle("~/Content/css", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css").Include(
+                      "~/Assets/Client/css/bootstrap.min.css",
+                      "~/Assets/Client/css/jquery-ui.css",
+                      "~/Assets/Client/css/fontawesome-all.min.css",
+                      "~/Assets/Client/css/flexslider.css",
+                      "~/Assets/Client/css/JiSlider.css",
+                      "~/Assets/Client/css/shop.css",
+                      "~/Assets/Client/css/style.css",
+                      "~//fonts.googleapis.com/css?family=Sunflower:500,700",
+                      "~//fonts.googleapis.com/css?family=Open+Sans:400,600,700",
+                      "~/Assets/Client/css/bootstrap-social.css"
+                      ));
+          //  BundleTable.EnableOptimizations = false;
         }
     }
 }
