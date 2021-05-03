@@ -4,11 +4,10 @@ using Models.Framework;
 using System.Linq;
 using System.Web.Mvc;
 using BotDetect.Web.Mvc;
-using Models.DAO;
-using Models.Framework;
 using OnlineShop.Common;
-using PagedList.Mvc;
 using OnlineShop.Models;
+using System.Configuration;
+
 namespace OnlineShop.Controllers
 {
     public class HomeController : Controller
@@ -20,6 +19,10 @@ namespace OnlineShop.Controllers
             ProductDAO dao = new ProductDAO();
             ViewBag.NewProduct = dao.NewsArrivals(6);
             ViewBag.BestProduct = dao.LastedProducts(4);
+            //set Tittle
+            ViewBag.Tittle= ConfigurationManager.AppSettings["Tittle"].ToString();
+            ViewBag.keywords = ConfigurationManager.AppSettings["keywords"].ToString();
+            ViewBag.description = ConfigurationManager.AppSettings["description"].ToString();
             return View();
         }
         [ChildActionOnly]

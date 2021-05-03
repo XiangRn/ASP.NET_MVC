@@ -20,6 +20,7 @@ namespace OnlineShop.Controllers
         public ActionResult Category(long id, int page=1, int pagesize=2)
         {
             ViewBag.ProductCategory =db.ProductCategories.Find(id) ;
+
             var result = dao.ListEx(id,page,pagesize);
             return View(result);
         }

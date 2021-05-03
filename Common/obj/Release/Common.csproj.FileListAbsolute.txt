@@ -1,0 +1,6 @@
+E:\ASP.NET MVC\Common\bin\Release\Common.dll
+E:\ASP.NET MVC\Common\bin\Release\Common.pdb
+E:\ASP.NET MVC\Common\obj\Release\Common.csprojAssemblyReference.cache
+E:\ASP.NET MVC\Common\obj\Release\Common.csproj.CoreCompileInputs.cache
+E:\ASP.NET MVC\Common\obj\Release\Common.dll
+E:\ASP.NET MVC\Common\obj\Release\Common.pdb

@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Models.Framework.Content>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@section Header{
+    <h1 class="mt-4">Setting for Contents</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item active">Setting for Contents</li>
+    </ol>
+}
+<div class="card mb-4">
+    <div class="card-header">
+        <i class="fas fa-table mr-1"></i>
+        Category List
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Meta Tittle</th>
+                        <th>Description</th>
+                        <th>Image</th>
+                        <th>CategoryID</th>
+
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>#</th>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Meta Tittle</th>
+                        <th>Description</th>
+                        <th>Image</th>
+                        <th>CategoryID</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    @foreach (var item in Model)//Model này sử dụng để đại diện cho List
+                    {
+                        <tr>
+                            <td><a href="~/Admin/Content/Edit/@item.ID">Edit</a></td>
+                            <td>@item.ID</td>
+                            <td>@item.Name</td>
+                            <td>@item.MetaTittle</td>
+                            <td>@item.Description</td>
+                            <td><img src="@item.Image" width="50" height="50" /></td>
+                            <td>@item.CategoryID</td>
+                        </tr>
+                    }
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

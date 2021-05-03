@@ -42,5 +42,11 @@ namespace Models.DAO
         {
             return db.Productts.SqlQuery("select * From Productt where Name like '%" + keyword + "%'").ToPagedList(page, pagesize);
         }
+        public void UpdateImages(long id, string images)
+        {
+            var product = GetID(id);
+            product.MoreImages = images;
+            db.SaveChanges();
+        }
     }
 }

@@ -44,6 +44,9 @@ namespace Models.Framework
         [Display(Name = "Category_MetaKeywords", ResourceType = typeof(StaticResource.Resources))]
         public string MetaKeywords { get; set; }
 
+        [StringLength(250)]        
+        public string MetaDescriptions { get; set; }
+
         [Display(Name = "Category_Status", ResourceType = typeof(StaticResource.Resources))]
         public bool? Status { get; set; }
 

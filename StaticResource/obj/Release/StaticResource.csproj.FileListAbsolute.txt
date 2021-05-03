@@ -1,0 +1,14 @@
+E:\ASP.NET MVC\StaticResource\bin\Release\StaticResource.dll
+E:\ASP.NET MVC\StaticResource\bin\Release\StaticResource.pdb
+E:\ASP.NET MVC\StaticResource\bin\Release\en\StaticResource.resources.dll
+E:\ASP.NET MVC\StaticResource\bin\Release\ja\StaticResource.resources.dll
+E:\ASP.NET MVC\StaticResource\obj\Release\StaticResource.csprojAssemblyReference.cache
+E:\ASP.NET MVC\StaticResource\obj\Release\StaticResource.Resources.resources
+E:\ASP.NET MVC\StaticResource\obj\Release\StaticResource.Resources.en.resources
+E:\ASP.NET MVC\StaticResource\obj\Release\StaticResource.Resources.ja.resources
+E:\ASP.NET MVC\StaticResource\obj\Release\StaticResource.csproj.GenerateResource.cache
+E:\ASP.NET MVC\StaticResource\obj\Release\StaticResource.csproj.CoreCompileInputs.cache
+E:\ASP.NET MVC\StaticResource\obj\Release\en\StaticResource.resources.dll
+E:\ASP.NET MVC\StaticResource\obj\Release\ja\StaticResource.resources.dll
+E:\ASP.NET MVC\StaticResource\obj\Release\StaticResource.dll
+E:\ASP.NET MVC\StaticResource\obj\Release\StaticResource.pdb

@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Models.Framework.ProductCategory>
+<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    @foreach (var item in Model.Where(x => x.ParentID == null))
+    {
+        var child = Model.Where(x => x.ParentID == item.ID);
+        var aclass = child.Count() > 0 ? "dropdown-toggle" : "";
+        var aclass1 = child.Count() > 0 ? "id=navbarDropdown1 role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false" : "";
+
+        <a class="nav-link @aclass" aria-labelledby="navbarDropdown" href="/san-pham/@item.MetaTitle-@item.ID"
+           @aclass1>
+            @item.Name
+        </a>
+        if (child.Count() > 0)
+        {
+
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                @foreach (var i in child)
+                {
+                    <a class="nav-link" href="/san-pham/@i.MetaTitle-@i.ID">@i.Name</a>
+                }
+
+
+            </div>
+
+        }
+
+
+    }
+
+</div>

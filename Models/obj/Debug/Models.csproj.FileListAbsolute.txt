@@ -1,5 +1,3 @@
-E:\ASP.NET MVC\Models\bin\Debug\EntityFramework.dll
-E:\ASP.NET MVC\Models\bin\Debug\EntityFramework.xml
 E:\ASP.NET MVC\Models\bin\Debug\Models.dll.config
 E:\ASP.NET MVC\Models\bin\Debug\Models.dll
 E:\ASP.NET MVC\Models\bin\Debug\Models.pdb
@@ -8,6 +6,7 @@ E:\ASP.NET MVC\Models\bin\Debug\CKFinder_FileEditor.dll
 E:\ASP.NET MVC\Models\bin\Debug\CKFinder_ImageResize.dll
 E:\ASP.NET MVC\Models\bin\Debug\CKFinder_Watermark.dll
 E:\ASP.NET MVC\Models\bin\Debug\Common.dll
+E:\ASP.NET MVC\Models\bin\Debug\EntityFramework.dll
 E:\ASP.NET MVC\Models\bin\Debug\EntityFramework.SqlServer.dll
 E:\ASP.NET MVC\Models\bin\Debug\PagedList.dll
 E:\ASP.NET MVC\Models\bin\Debug\PagedList.Mvc.dll
@@ -17,6 +16,7 @@ E:\ASP.NET MVC\Models\bin\Debug\StaticResource.pdb
 E:\ASP.NET MVC\Models\bin\Debug\CKFinder_FileEditor.pdb
 E:\ASP.NET MVC\Models\bin\Debug\CKFinder_ImageResize.pdb
 E:\ASP.NET MVC\Models\bin\Debug\CKFinder_Watermark.pdb
+E:\ASP.NET MVC\Models\bin\Debug\EntityFramework.xml
 E:\ASP.NET MVC\Models\bin\Debug\EntityFramework.SqlServer.xml
 E:\ASP.NET MVC\Models\bin\Debug\PagedList.xml
 E:\ASP.NET MVC\Models\bin\Debug\PagedList.Mvc.xml

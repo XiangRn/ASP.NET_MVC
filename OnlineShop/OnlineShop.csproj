@@ -171,6 +171,7 @@
     <Compile Include="Areas\Admin\Controllers\ContentController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
     <Compile Include="Areas\Admin\Controllers\UserController.cs" />
     <Compile Include="Areas\Admin\Models\LoginModel.cs" />
     <Compile Include="Common\CommonConstants.cs" />
@@ -1174,6 +1175,7 @@
     <Content Include="Assets\admin\js\ckfinder\skins\v1\skin.js" />
     <Content Include="Assets\admin\js\ckfinder\skins\v1\uipanel.css" />
     <Content Include="Assets\admin\js\ckfinder\translations.txt" />
+    <Content Include="Assets\admin\js\controller\productController.js" />
     <Content Include="Assets\Client\css\bootstrap-social.css" />
     <Content Include="Assets\Client\css\jquery-ui.css" />
     <Content Include="Assets\Client\data\Provinces_Data.xml" />
@@ -1333,6 +1335,7 @@
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="Areas\Admin\Views\Content\Insert.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\401.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

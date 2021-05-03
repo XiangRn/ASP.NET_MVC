@@ -1,0 +1,175 @@
+﻿@model List<OnlineShop.Models.CartItem>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section cssHeader{
+    <!--checkout-->
+    <link rel="stylesheet" type="text/css" href="~/Assets/Client/css/checkout.css">
+    <!--//checkout-->
+}
+@section slide{
+    <div class="inner_page-banner one-img">
+    </div>
+    <!--//banner -->
+    <!-- short -->
+    <div class="using-border py-3">
+        <div class="inner_breadcrumb  ml-4">
+            <ul class="short_ls">
+                <li>
+                    <a href="/trang-chu">Trang Chủ</a>
+                    <span>/ /</span>
+                </li>
+                <li><a href="/trang-chu">Check out</a></li>
+            </ul>
+        </div>
+    </div>
+}
+
+
+<section class="checkout py-lg-4 py-md-3 py-sm-3 py-3">
+    <div class="container py-lg-5 py-md-4 py-sm-4 py-3">
+        <div class="shop_inner_inf">
+            <div class="privacy about">
+                <h3>Chec<span>kout</span></h3>
+                <div class="checkout-right">
+                    <h4>Your shopping cart contains: <span>3 Products</span></h4>
+                    <table class="timetable_sub">
+                        <thead>
+                            <tr>
+                                <th>SL No.</th>
+                                <th>Product</th>
+                                <th>Quality</th>
+                                <th>Product Name</th>
+                                <th>Price</th>
+                                <th>Remove</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{ int count = 0;
+                                foreach (var item in Model)
+                                {
+                                    <tr class="rem1">
+                                        <td class="invert">@{count += 1; }</td>
+                                        <td class="invert-image"><a href="/chi-tiet/@item.Product.MetaTittle-@item.Product.ID"><img src="@item.Product.Image" alt=" " class="img-responsive"></a></td>
+                                        <td class="invert">
+                                            <div >
+                                               
+                                                    <input class="quantity" data-id="@item.Product.ID" value="@item.Quantity" />
+                                                  
+                                            </div>
+
+                                        </td>
+                                        <td class="invert">@item.Product.Name</td>
+                                        <td class="invert">@item.Product.Price.GetValueOrDefault(0).ToString("N0")</td>
+                                        <td class="invert">
+                                            <div class="rem">
+                                                <div class="close1"  data-id="@item.Product.ID" > </div>
+                                             
+                                              
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="checkout-left">
+                    <div class="col-md-4 checkout-left-basket">
+                        <h4 id="btnDelete">Xóa Giỏ Hàng</h4>
+                        <h4 id="btnUpdate">Cập Nhật Giỏ Hàng</h4>
+                        <h4 id="btnContinue"> Tiếp Tục Mua Hàng</h4>
+                        <ul>
+                            @{ double sum = 0;
+                                foreach (var item in Model)
+                                {
+                                    <li>@item.Product.Name<i>-</i> <span>@item.Product.Price.GetValueOrDefault(0).ToString("N0")</span></li>
+                                    sum += Convert.ToDouble((item.Product.Price.GetValueOrDefault(0) * item.Quantity));
+                                    @*<li>Total Service Charges <i>-</i> <span>$55.00</span></li>*@
+
+                                }
+                                <li>Tổng Tiền <i>-</i> <span>@sum</span></li>
+                            }
+
+                        </ul>
+                    </div>
+                    <div class="col-md-8 address_form">
+                        <h4>Add a new Details</h4>
+
+
+                        @using (Html.BeginForm("Index", "Cart", FormMethod.Post))
+                        {
+                            @Html.AntiForgeryToken()
+
+                            <section class="creditly-wrapper wrapper">
+                                <div class="information-wrapper">
+                                    <div class="first-row form-group">
+                                        <div class="controls">
+                                            <label class="control-label">Full name: </label>
+                                            <input class="billing-address-name form-control" type="text" name="name" placeholder="Full name">
+                                        </div>
+                                        <div class="card_number_grids">
+                                            <div class="card_number_grid_left">
+                                                <div class="controls">
+                                                    <label class="control-label">Mobile number:</label>
+                                                    <input class="form-control" type="text" placeholder="Mobile number" name="mobile">
+                                                </div>
+                                            </div>
+                                            <div class="card_number_grid_right">
+                                                <div class="controls">
+                                                    <label class="control-label">Address: </label>
+                                                    <input class="form-control" type="text" placeholder="Address" name="address">
+                                                </div>
+                                            </div>
+                                            <div class="clear"> </div>
+                                        </div>
+                                        <div class="controls">
+                                            <label class="control-label">Email: </label>
+                                            <input class="form-control" type="text" placeholder="Email" name="email">
+                                        </div>
+
+                                    </div>
+                                    <button class="submit check_out">Giao Hàng Đến Địa Chỉ Này</button>
+                                </div>
+                            </section>
+                        }
+
+
+
+
+                        <div class="checkout-right-basket">
+                            <a href="">Make a Payment </a>
+                        </div>
+                    </div>
+                    <div class="clearfix"> </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+        <!-- //top products -->
+    </div>
+</section>
+@section jsFooter{
+    <!--quantity-->
+    <script>
+        $('.value-plus').on('click', function () {
+            var divUpd = $(this).parent().find('.value'),
+                newVal = parseInt(divUpd.text(), 10) + 1;
+            divUpd.text(newVal);
+        });
+
+        $('.value-minus').on('click', function () {
+            var divUpd = $(this).parent().find('.value'),
+                newVal = parseInt(divUpd.text(), 10) - 1;
+            if (newVal >= 1) divUpd.text(newVal);
+        });
+    </script>
+    <!--quantity-->
+    <!--closed-->
+    
+    <!--//closed-->
+    <script src="~/Assets/Client/js/controller/cartcontroller.js"></script>
+}

@@ -57,6 +57,9 @@ namespace Models.Framework
         [StringLength(250)]
         public string MetaKeywords { get; set; }
 
+        [StringLength(250)]
+        public string MetaDescriptions { get; set; }
+
         public bool? Status { get; set; }
 
         public DateTime? TopHot { get; set; }

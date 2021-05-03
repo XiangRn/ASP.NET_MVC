@@ -1,5 +1,3 @@
-E:\ASP.NET MVC\OnlineShop\obj\Debug\OnlineShop.csprojAssemblyReference.cache
-E:\ASP.NET MVC\OnlineShop\obj\Debug\OnlineShop.csproj.CoreCompileInputs.cache
 E:\ASP.NET MVC\OnlineShop\bin\OnlineShop.dll.config
 E:\ASP.NET MVC\OnlineShop\bin\OnlineShop.dll
 E:\ASP.NET MVC\OnlineShop\bin\OnlineShop.pdb
@@ -105,6 +103,8 @@ E:\ASP.NET MVC\OnlineShop\bin\Antlr3.Runtime.pdb
 E:\ASP.NET MVC\OnlineShop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 E:\ASP.NET MVC\OnlineShop\bin\en\StaticResource.resources.dll
 E:\ASP.NET MVC\OnlineShop\bin\ja\StaticResource.resources.dll
+E:\ASP.NET MVC\OnlineShop\obj\Debug\OnlineShop.csprojAssemblyReference.cache
+E:\ASP.NET MVC\OnlineShop\obj\Debug\OnlineShop.csproj.CoreCompileInputs.cache
 E:\ASP.NET MVC\OnlineShop\obj\Debug\OnlineShop.csproj.CopyComplete
 E:\ASP.NET MVC\OnlineShop\obj\Debug\OnlineShop.dll
 E:\ASP.NET MVC\OnlineShop\obj\Debug\OnlineShop.pdb
