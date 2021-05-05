@@ -15,12 +15,7 @@ namespace OnlineShop.Controllers
     public class SampleController : Controller
     {
         OnlineShopDBContext db = new OnlineShopDBContext();
-        // GET: Sample
-        public ActionResult Index()
-        {
-            
-            return View();
-        }
+       
     
         public ActionResult GeneratePDF()
         {

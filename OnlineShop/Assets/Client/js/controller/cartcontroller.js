@@ -48,8 +48,7 @@
                 }
             })
         });
-        $('.close1').off('click').on('click', function () {
-            alert($(this).data('id'));
+        $('.close1').off('click').on('click', function () {            
             $.ajax({
                 type: 'POST',
                 url: '/Cart/DeleteEachItem',

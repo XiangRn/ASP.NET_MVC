@@ -99,16 +99,16 @@ namespace OnlineShop.Controllers
             if (cart != null)
             {
                 lst = (List<CartItem>)cart;
-                if (lst.Where(x => x.Product.ID == productid).SingleOrDefault() != null)
+                if (lst.Where(x => x.Product.ID == productid).SingleOrDefault()!= null)
                 {
-                    foreach (var item in lst)
-                    {
-                        if (item.Product.ID == productid)
-                        {
-                            item.Quantity += quantity;
-                        }
+                    //foreach (var item in lst)
+                    //{
+                    //    if (item.Product.ID == productid)
+                    //    {
+                    lst.Where(x => x.Product.ID == productid).SingleOrDefault().Quantity += quantity;
+                    //    }
 
-                    }
+                    //}
                     
                 }
                 else

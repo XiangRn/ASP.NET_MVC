@@ -1414,7 +1414,6 @@
     <Content Include="Views\Content\LContent.cshtml" />
     <Content Include="Views\Content\Details.cshtml" />
     <Content Include="Views\Content\DetailTag.cshtml" />
-    <Content Include="Views\Sample\Index.cshtml" />
     <Content Include="Views\Sample\View.cshtml" />
     <Content Include="Views\Cart\View.cshtml" />
     <Content Include="Views\QrGenerate\ActionQrCode.cshtml" />
