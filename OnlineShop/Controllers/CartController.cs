@@ -9,6 +9,8 @@ using Models.DAO;
 using System.Configuration;
 using System.Web.Script.Serialization;
 using Common;
+using Rotativa;
+
 namespace OnlineShop.Controllers
 {
     public class CartController : Controller
@@ -37,19 +39,25 @@ namespace OnlineShop.Controllers
             ls.Add(address);
             ls.Add(email);
             object[] lst = ls.ToArray();
+           
             var result = db.Database.ExecuteSqlCommand("insert into [Order](CreatedDate,ShipName,ShipMobile,ShipAddress,ShipEmail) values(getdate(),@p0,@p1,@p2,@p3)", lst);
             if (result > 0)
             {
-                var order = db.Orders.SqlQuery("select top 1 * from [Order] order by ID desc").SingleOrDefault();
+                var order = db.Orders.SqlQuery("select top 1 * from [Order] order by ID desc").SingleOrDefault();               
                 decimal total = 0;
                 if (order !=null)
                 {
-                    List<object> ls1 = null;
+                    double sum = 0;
+                    List<object> ls1 = null; string s = string.Empty;
+                    s += "Cảm ơn quý khách đã đặt hàng tại cửa hàng của Toys-Shop của chúng tôi \n";
+                    s += "Người mua hàng : "+shipName+"\n";
+                    
                     if (sessionCart != null){
                         foreach (var item in sessionCart)
                         {
                            ls1 = new List<object>();
-                         
+                           s +="Sản Phẩm : "+item.Product.Name +"\n Số Lượng : "+item.Quantity+"\n Gía:"+item.Product.Price+"\n" ;
+                            sum += Convert.ToDouble((item.Quantity * item.Product.Price));
                             ls1.Add(item.Product.ID);
                             ls1.Add(order.ID);
                             ls1.Add(item.Quantity);
@@ -59,21 +67,25 @@ namespace OnlineShop.Controllers
 
                             total += (item.Product.Price.GetValueOrDefault(0) * item.Quantity);
                         }
+                        s += "Tổng Tiền : "+sum.ToString();
+                        Session["Bill"] = s;
                     }
                   
                 }
                 string content = System.IO.File.ReadAllText(Server.MapPath("~/Assets/Client/template/neworder.html"));
-
+                
                 content = content.Replace("{{CustomerName}}", shipName);
                 content = content.Replace("{{Phone}}", mobile);
                 content = content.Replace("{{Email}}", email);
                 content = content.Replace("{{Address}}", address);
                 content = content.Replace("{{Total}}", total.ToString("N0"));
+             
                 //var toEmail = ConfigurationManager.AppSettings["ToEmailAddress"].ToString();
-              
-                        new MailHelper().SendMail(email, "Đơn hàng mới từ OnlineShop", content);
+
+                new MailHelper().SendMail(email, "Đơn hàng mới từ OnlineShop", content);
                 //new MailHelper().SendMail(toEmail, "Đơn hàng mới từ OnlineShop", content);
-                return Redirect("/trang-chu");
+               
+                return RedirectToAction("GeneratePDF", "Sample");
             }
             return View();
            

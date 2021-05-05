@@ -46,6 +46,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>..\HelloWorld\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>..\HelloWorld\packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>..\HelloWorld\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
     <Reference Include="BotDetect, Version=4.4.2.0, Culture=neutral, PublicKeyToken=74616036388b765f, processorArchitecture=MSIL">
       <HintPath>..\HelloWorld\packages\Captcha.4.4.2\lib\net35\BotDetect.dll</HintPath>
     </Reference>
@@ -83,6 +92,14 @@
     </Reference>
     <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
       <HintPath>..\HelloWorld\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="QRCoder, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\HelloWorld\packages\QRCoder.1.4.1\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="Rotativa, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\HelloWorld\packages\Rotativa.1.7.3\lib\net461\Rotativa.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -151,6 +168,13 @@
       <Private>True</Private>
       <HintPath>..\HelloWorld\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="zxing, Version=0.16.6.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\HelloWorld\packages\ZXing.Net.0.16.6\lib\net47\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.6.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\HelloWorld\packages\ZXing.Net.0.16.6\lib\net47\zxing.presentation.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
@@ -183,6 +207,8 @@
     <Compile Include="Controllers\ContentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\QrGenerateController.cs" />
+    <Compile Include="Controllers\SampleController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -191,7 +217,9 @@
     <Compile Include="Models\DistrictModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\ProvinceModel.cs" />
+    <Compile Include="Models\QRModel.cs" />
     <Compile Include="Models\RegisterModel.cs" />
+    <Compile Include="Models\Sample.cs" />
     <Compile Include="Models\TownModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -1176,6 +1204,7 @@
     <Content Include="Assets\admin\js\ckfinder\skins\v1\uipanel.css" />
     <Content Include="Assets\admin\js\ckfinder\translations.txt" />
     <Content Include="Assets\admin\js\controller\productController.js" />
+    <Content Include="Assets\admin\js\controller\productDetail.js" />
     <Content Include="Assets\Client\css\bootstrap-social.css" />
     <Content Include="Assets\Client\css\jquery-ui.css" />
     <Content Include="Assets\Client\data\Provinces_Data.xml" />
@@ -1273,6 +1302,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Rotativa\help-wkhtmltoimage.txt" />
+    <Content Include="Rotativa\help-wkhtmltopdf.txt" />
+    <Content Include="Rotativa\wkhtmltoimage.exe" />
+    <Content Include="Rotativa\wkhtmltopdf.exe" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Assets\admin\scss\layout\_authentication.scss" />
@@ -1336,6 +1369,8 @@
     <Content Include="Areas\Admin\Views\Content\Insert.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\401.cshtml" />
     <Content Include="Areas\Admin\Views\Product\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Details.cshtml" />
+    <Content Include="App_Browsers\qt.browser" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -1379,6 +1414,10 @@
     <Content Include="Views\Content\LContent.cshtml" />
     <Content Include="Views\Content\Details.cshtml" />
     <Content Include="Views\Content\DetailTag.cshtml" />
+    <Content Include="Views\Sample\Index.cshtml" />
+    <Content Include="Views\Sample\View.cshtml" />
+    <Content Include="Views\Cart\View.cshtml" />
+    <Content Include="Views\QrGenerate\ActionQrCode.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

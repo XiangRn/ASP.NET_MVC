@@ -6,6 +6,8 @@ using System.Web.Mvc;
 using Models.Framework;
 using Models.DAO;
 using PagedList;
+using System.Xml.Linq;
+
 namespace OnlineShop.Controllers
 {
     public class ProductController : Controller
@@ -20,14 +22,22 @@ namespace OnlineShop.Controllers
         public ActionResult Category(long id, int page=1, int pagesize=2)
         {
             ViewBag.ProductCategory =db.ProductCategories.Find(id) ;
-
             var result = dao.ListEx(id,page,pagesize);
             return View(result);
         }
         public ActionResult Detail(long id)
-        {
+        {            
+            var product = dao.GetID(id);
+            var image = product.MoreImages;
+            XElement xElement = XElement.Parse(image);
+            List<string> listImages = new List<string>();
+            foreach (var item in xElement.Elements())
+            {
+                listImages.Add(item.Value);
+            }
+            ViewBag.listImages = listImages;
             ViewBag.Category = db.ProductCategories.SqlQuery("select * from ProductCategory where ID=@p0", db.Productts.Find(id).CategoryID).SingleOrDefault();
-            return View(db.Productts.Find(id));
+            return View(product);
         }
         public ActionResult ListName(string q)
         {

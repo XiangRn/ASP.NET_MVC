@@ -1,0 +1,219 @@
+﻿@model Models.Framework.Productt
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Productt</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Code)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MetaTittle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MetaTittle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Image)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Image)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MoreImages)
+        </dt>
+      
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PromoPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PromoPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IncludeVAT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IncludeVAT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CategoryID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CategoryID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Detail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Detail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Warranty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Warranty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MetaKeywords)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MetaKeywords)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MetaDescriptions)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MetaDescriptions)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TopHot)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TopHot)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ViewCount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ViewCount)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+<button class="btn btn-primary" id="EditImage">Sửa Ảnh</button>
+<div class="modal fade" id="imageManamages" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Modal Header</h4>
+            </div>
+            <div class="modal-body">
+                <div id="imageList"></div>
+                <div class="clear"></div>
+                <input type="button" id="btnChooImages" value="Chọn Ảnh" class="btn btn-primary" />
+                <input type="hidden" id="hidProductID" value="0" data-id="@Model.ID" />
+            </div>
+            <div class="modal-footer">
+                <input type="button" class="btn btn-success" id="btnSaveImages" value="Save" />
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+@section jsFooter{
+
+    <script src="~/Assets/admin/js/controller/productDetail.js"></script>
+}

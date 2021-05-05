@@ -6,6 +6,10 @@ using System.Net.Mail;
 using System.Threading.Tasks;
 using System.Configuration;
 using System.Net;
+
+using iTextSharp.text;
+using iTextSharp.text.html.simpleparser;
+
 namespace Common
 {
     public class MailHelper
@@ -20,12 +24,15 @@ namespace Common
 
             bool enabledSsl = bool.Parse(ConfigurationManager.AppSettings["EnabledSSL"].ToString());
 
+         
             string body = content;
             MailMessage message = new MailMessage(new MailAddress(fromEmailAddress, fromEmailDisplayName), new MailAddress(toEmailAddress));
             message.Subject = subject;
             message.IsBodyHtml = true;
             message.Body = body;
-            
+           
+            //Dim at1 As New Attachment(Server.MapPath("~/Main/images/English.pdf"))
+           
             var client = new SmtpClient();
             client.Credentials = new NetworkCredential(fromEmailAddress, fromEmailPassword);
             client.Host = smtpHost;

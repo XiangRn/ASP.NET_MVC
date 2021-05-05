@@ -108,3 +108,15 @@ E:\ASP.NET MVC\OnlineShop\obj\Debug\OnlineShop.csproj.CoreCompileInputs.cache
 E:\ASP.NET MVC\OnlineShop\obj\Debug\OnlineShop.csproj.CopyComplete
 E:\ASP.NET MVC\OnlineShop\obj\Debug\OnlineShop.dll
 E:\ASP.NET MVC\OnlineShop\obj\Debug\OnlineShop.pdb
+E:\ASP.NET MVC\OnlineShop\bin\Rotativa.dll
+E:\ASP.NET MVC\OnlineShop\bin\QRCoder.dll
+E:\ASP.NET MVC\OnlineShop\bin\AForge.dll
+E:\ASP.NET MVC\OnlineShop\bin\AForge.Video.DirectShow.dll
+E:\ASP.NET MVC\OnlineShop\bin\AForge.Video.dll
+E:\ASP.NET MVC\OnlineShop\bin\zxing.dll
+E:\ASP.NET MVC\OnlineShop\bin\zxing.presentation.dll
+E:\ASP.NET MVC\OnlineShop\bin\AForge.xml
+E:\ASP.NET MVC\OnlineShop\bin\AForge.Video.xml
+E:\ASP.NET MVC\OnlineShop\bin\AForge.Video.DirectShow.xml
+E:\ASP.NET MVC\OnlineShop\bin\zxing.xml
+E:\ASP.NET MVC\OnlineShop\bin\zxing.presentation.xml

@@ -23,6 +23,7 @@
             };
             finder.popup();
         });
+       
         $('#btnSaveImages').off('click').on('click', function () {
             var images = [];
             var id = $('#hidProductID').val();

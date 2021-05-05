@@ -39,15 +39,14 @@
                     <div class="grid images_3_of_2">
                         <div class="flexslider1">
                             <ul class="slides">
-                                <li data-thumb="/Assets/Client/images/f2.jpg">
-                                    <div class="thumb-image"> <img src="~/Assets/Client/images/f2.jpg" data-imagezoom="true" class="img-fluid" alt="@Model.Name"> </div>
-                                </li>
-                                <li data-thumb="/Assets/Client/images/f1.jpg">
-                                    <div class="thumb-image"> <img src="~/Assets/Client/images/f1.jpg" data-imagezoom="true" class="img-fluid" alt="@Model.Name"> </div>
-                                </li>
-                                <li data-thumb="/Assets/Client/images/f3.jpg">
-                                    <div class="thumb-image"> <img src="~/Assets/Client/images/f3.jpg" data-imagezoom="true" class="img-fluid" alt="@Model.Name"> </div>
-                                </li>
+                                @foreach (var item in ViewBag.listImages)
+                                {
+                                    <li data-thumb="@item">
+                                    <div class="thumb-image"> <img src="@item" data-imagezoom="true" class="img-fluid" alt="@Model.Name"> </div>
+                                    </li>
+
+                                }
+
                             </ul>
                             <div class="clearfix"></div>
                         </div>

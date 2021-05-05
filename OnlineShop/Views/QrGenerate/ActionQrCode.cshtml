@@ -1,0 +1,47 @@
+﻿@model OnlineShop.Models.QRModel
+
+@{
+
+    Layout = null;
+
+}
+
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width" />
+
+    <title>
+
+        How To Generate QR Code in MVC Using C#
+
+    </title>
+
+</head>
+
+<body>
+
+   
+
+       
+       
+
+        <div class="col-md-3">
+            @if (ViewBag.Url != null)
+            {
+                <img src="@ViewBag.Url" width="80" height="80" alt="Alternate Text" />
+            }
+
+
+        </div>
+
+   
+
+</body>
+
+</html>

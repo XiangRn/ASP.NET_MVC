@@ -28,6 +28,7 @@ namespace OnlineShop.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
+                
                 db.Productts.Add(productt);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -58,14 +59,61 @@ namespace OnlineShop.Areas.Admin.Controllers
             XElement xElement = new XElement("Images");
             foreach (var item in listImages)
             {
-                xElement.Add(new XElement("Image", item.Substring(item.IndexOf("D")-1)));
+                xElement.Add(new XElement("Image", item.Substring(item.IndexOf("D") - 1)));
             }
             ProductDAO dao = new ProductDAO();
             dao.UpdateImages(id, xElement.ToString());
             return Json(new
             {
-                status=true
+                status = true
             });
+        }
+    
+        public ActionResult Details(long id)
+        {
+            ProductDAO dao = new ProductDAO();
+            var product = dao.GetID(id);
+            var image = product.MoreImages;
+            XElement xElement = XElement.Parse(image);
+            List<string> listImages = new List<string>();
+            foreach (var item in xElement.Elements())
+            {
+                listImages.Add(item.Value);
+            }
+            ViewBag.listImages = listImages;
+            return View(product);
+        }
+        public JsonResult SaveImg(long id, string images)
+        {
+            JavaScriptSerializer js = new JavaScriptSerializer();
+            var listImages = js.Deserialize<List<string>>(images);
+            XElement xElement = new XElement("Images");
+            foreach (var item in listImages)
+            {
+                xElement.Add(new XElement("Image",item.Substring(item.IndexOf("D")-1)));
+            }
+            ProductDAO dao = new ProductDAO();
+            dao.UpdateImages(id, xElement.ToString());
+            return Json(new
+            {
+                status = true
+            }) ;
+        }
+        public JsonResult Loading(long id)
+        {
+            ProductDAO dao = new ProductDAO();
+           
+            XElement xElement = XElement.Parse(dao.GetID(id).MoreImages);
+            List<string> listImages = new List<string>();
+            foreach (var item in xElement.Elements())
+            {
+                listImages.Add(item.Value);
+            }
+            return Json(new
+            {
+                data = listImages,
+                status = true
+            }, JsonRequestBehavior.AllowGet);
         }
     }
 }
