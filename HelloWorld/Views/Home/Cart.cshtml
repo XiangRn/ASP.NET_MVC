@@ -1,0 +1,32 @@
+﻿@model List<HelloWorld.Models.CartItem>
+
+@{
+    ViewBag.Title = "Cart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Cart</h2>
+
+
+<table class="table">
+
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @item.Product.Name
+        </td>
+        <td><input type="text" value="@item.Quantity" class="quantity" data-id="@item.Product.ID" /></td>
+        @*<td><button class="update" data-id="@item.Product.ID">Cập Nhật</button></td>*@
+        <td><button class="delete" data-id="@item.Product.ID">Xóa</button></td>
+    </tr>
+    }
+
+</table>
+<button id="btnUpdate">Cập nhật thông tin</button>
+<button id="btnDelete">Xóa toàn bộ giỏ hàng</button>
+@section scripts{
+
+
+    <script src="~/Scripts/controller/manageCart.js"></script>
+}

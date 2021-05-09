@@ -80,3 +80,15 @@ E:\ASP.NET MVC\HelloWorld\obj\Debug\HelloWorld.csproj.CoreCompileInputs.cache
 E:\ASP.NET MVC\HelloWorld\obj\Debug\HelloWorld.csproj.CopyComplete
 E:\ASP.NET MVC\HelloWorld\obj\Debug\HelloWorld.dll
 E:\ASP.NET MVC\HelloWorld\obj\Debug\HelloWorld.pdb
+E:\ASP.NET MVC\HelloWorld\bin\Common.dll
+E:\ASP.NET MVC\HelloWorld\bin\Models.dll
+E:\ASP.NET MVC\HelloWorld\bin\StaticResource.dll
+E:\ASP.NET MVC\HelloWorld\bin\PagedList.dll
+E:\ASP.NET MVC\HelloWorld\bin\Common.pdb
+E:\ASP.NET MVC\HelloWorld\bin\Models.pdb
+E:\ASP.NET MVC\HelloWorld\bin\Models.dll.config
+E:\ASP.NET MVC\HelloWorld\bin\StaticResource.pdb
+E:\ASP.NET MVC\HelloWorld\bin\PagedList.xml
+E:\ASP.NET MVC\HelloWorld\bin\en\StaticResource.resources.dll
+E:\ASP.NET MVC\HelloWorld\bin\ja\StaticResource.resources.dll
+E:\ASP.NET MVC\HelloWorld\obj\Debug\HelloWorld.csprojAssemblyReference.cache

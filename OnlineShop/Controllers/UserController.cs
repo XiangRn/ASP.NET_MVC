@@ -195,7 +195,7 @@ namespace OnlineShop.Controllers
                 district = new DistrictModel();
                 district.ID = int.Parse(item.Attribute("id").Value);
                 district.Name = item.Attribute("value").Value;
-                district.ProvinceID = provinceID;
+               // district.ProvinceID = provinceID;
                 lst.Add(district);
             }
             return Json(new
@@ -217,7 +217,7 @@ namespace OnlineShop.Controllers
                 town = new TownModel();
                 town.ID = int.Parse(item.Attribute("id").Value);
                 town.Name = item.Attribute("value").Value;
-                town.DistrictID = districtID;               
+              //  town.DistrictID = districtID;               
                 lst.Add(town);
             }
             return Json(new

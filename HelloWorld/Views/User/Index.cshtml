@@ -1,0 +1,55 @@
+﻿@model Models.Framework.User
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>User</h4>
+        <hr />
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ProvinceID, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.ProvinceID, new SelectList(new string[] { }),  new { @class = "form-control", @id = "ddlProvince" } )
+                @Html.ValidationMessageFor(model => model.ProvinceID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DistrictID, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.DistrictID, new SelectList(new string[] { }),new { @class = "form-control", @id = "ddlDistrict" } )
+                @Html.ValidationMessageFor(model => model.DistrictID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TownID, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.TownID, new SelectList(new string[] { }), new { @class = "form-control", @id = "ddlTown"  })
+                @Html.ValidationMessageFor(model => model.TownID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+@section scripts{
+
+    
+    <script src="~/Scripts/controller/ChoosePDT.js"></script>
+}

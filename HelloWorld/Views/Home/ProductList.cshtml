@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Models.Framework.Productt>
+
+@{
+    ViewBag.Title = "ProductList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ProductList</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td ><button class="AddCart" data-id="@item.ID">Add cart</button></td>
+        </tr>
+    }
+
+</table>
+@section scripts{
+
+    <script src="~/Scripts/controller/shoppingcart.js"></script>
+
+}
