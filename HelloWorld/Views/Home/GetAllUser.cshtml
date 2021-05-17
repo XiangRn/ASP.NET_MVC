@@ -1,0 +1,37 @@
+﻿@using PagedList.Mvc
+@model PagedList.IPagedList<Models.Framework.User>
+@{
+    ViewBag.Title = "GetAllUser";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>GetAllUser</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+
+            <td>
+               <button href="#" class="changestatus" data-id="@item.ID">@(item.Status?"Active":"Disactive")</button>
+            </td>
+
+        </tr>
+    }
+
+
+</table>
+@Html.PagedListPager(Model, page => Url.Action("GetAllUser", new { page }))
+@section scripts{
+
+    <script src="~/Scripts/controller/ChangStatus.js"></script>
+
+}

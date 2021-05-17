@@ -122,5 +122,20 @@ namespace HelloWorld.Controllers
                 status=true
             });
         }
+        public ActionResult GetAllUser(int page=1, int pageSize=3)
+        {
+            UserDao dao = new UserDao();
+            return View(dao.ListEx(page,pageSize));
+        }
+        public JsonResult ChangeStatus(long id)
+        {
+           ChangStatus changeStatus = new ChangStatus();
+            bool result = changeStatus.Change(id);
+            return Json(new
+            {
+                status = result
+
+            }) ;
+        }
     }
 }

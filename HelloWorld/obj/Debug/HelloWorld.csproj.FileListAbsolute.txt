@@ -92,3 +92,5 @@ E:\ASP.NET MVC\HelloWorld\bin\PagedList.xml
 E:\ASP.NET MVC\HelloWorld\bin\en\StaticResource.resources.dll
 E:\ASP.NET MVC\HelloWorld\bin\ja\StaticResource.resources.dll
 E:\ASP.NET MVC\HelloWorld\obj\Debug\HelloWorld.csprojAssemblyReference.cache
+E:\ASP.NET MVC\HelloWorld\bin\PagedList.Mvc.dll
+E:\ASP.NET MVC\HelloWorld\bin\PagedList.Mvc.xml
