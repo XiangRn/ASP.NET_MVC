@@ -51,8 +51,8 @@ namespace HelloWorld.Controllers
             {
                 Random rd = new Random();
                 // Find your Account Sid and Auth Token at twilio.com/console
-                const string accountSid = "ACacb7c00d9f9520d18adede2923d23500";
-                const string authToken = "67ff9cc15849ba9abb5f76b29368a28c";
+                const string accountSid = "xxxxxxxxxxxxxxx";
+                const string authToken = "xxxxxxxxxxxxx";
                 string verify = rd.Next(1000, 9999).ToString();
                 Session["verify"] = verify;
                 TwilioClient.Init(accountSid, authToken);
@@ -64,7 +64,7 @@ namespace HelloWorld.Controllers
                     //First navigate to your test credentials https://www.twilio.com/user/account/developer-tools/test-credentials
                     // then you need to get Twilio number from https://www.twilio.com/console/voice/numbers
                     from: new PhoneNumber("+16124008790"), //  From number, must be an SMS-enabled Twilio number ( This will send sms from ur "To" numbers ). 
-                    messagingServiceSid : "MG5a864b1582534353daec2d1504526776",
+                    messagingServiceSid : "xxxxxxxxxxxxxx",
                 body: $"Mã xác nhận Toys-Shop : " + verify + " .Vui lòng không chia sẻ mật mã này cho bất kỳ ai trong bất kỳ trường hợp nào");
 
 
